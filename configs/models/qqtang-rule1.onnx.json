@@ -1,0 +1,23 @@
+{
+  "format": "qqtang-decentralized-actor-onnx",
+  "contract_version": 2,
+  "model_architecture_version": 2,
+  "model_variant": "unified-candidate-v1",
+  "tensor_version": 18,
+  "channels": 117,
+  "scalars": 187,
+  "actions": 45,
+  "height": 13,
+  "width": 15,
+  "batch_dynamic": true,
+  "recurrent_hidden_size": 256,
+  "recurrent_reset": "match_or_episode_start",
+  "onnx_sha256": "e158a0995611935cde489d890228f06f3263708d76740abb6a654ecd72c9470e",
+  "maximum_parity_error": 1.0013580322265625e-05,
+  "mean_parity_error": 2.9483746857295046e-06,
+  "sampling": {
+    "enabled": true,
+    "min_p": 0.1,
+    "temperature": 1.0
+  }
+}

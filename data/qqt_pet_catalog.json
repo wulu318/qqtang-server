@@ -1,0 +1,4127 @@
+{
+  "config_path": "config/PetCfg.ini",
+  "experience_thresholds": [
+    0,
+    180,
+    580,
+    1380,
+    2920,
+    5230,
+    8570,
+    16490,
+    29810,
+    51410
+  ],
+  "definitions": [
+    {
+      "pet_type_id": 25001,
+      "name": "普通的酷比",
+      "description": "没什么天赋。",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 1,
+      "level_7_resource_id": 2,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet1_stand.img",
+        "object/pet/pet1_walk.img",
+        "object/pet/pet2_stand.img",
+        "object/pet/pet2_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25002,
+      "name": "富有的酷比",
+      "description": "具有天赋：糖币之光10%。",
+      "innate_skills": "AQ==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 1,
+      "level_7_resource_id": 2,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet1_stand.img",
+        "object/pet/pet1_walk.img",
+        "object/pet/pet2_stand.img",
+        "object/pet/pet2_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25003,
+      "name": "尊崇的酷比",
+      "description": "具有天赋：声望之光5%。",
+      "innate_skills": "BA==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 1,
+      "level_7_resource_id": 2,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet1_stand.img",
+        "object/pet/pet1_walk.img",
+        "object/pet/pet2_stand.img",
+        "object/pet/pet2_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25004,
+      "name": "爱情酷比",
+      "description": "具有天赋：声望之光5%，勇气之光5%，材料闪耀5%。",
+      "innate_skills": "BAIF",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 1,
+      "level_7_resource_id": 2,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet1_stand.img",
+        "object/pet/pet1_walk.img",
+        "object/pet/pet2_stand.img",
+        "object/pet/pet2_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25005,
+      "name": "黑暗火焰精灵",
+      "description": "恶魔的使者，拥有邪恶的力量。具有天赋：积分之光6%，勇气之光6%，积分闪耀6%。",
+      "innate_skills": "DQwR",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 9,
+      "level_7_resource_id": 10,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet9_stand.img",
+        "object/pet/pet9_walk.img",
+        "object/pet/pet10_stand.img",
+        "object/pet/pet10_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25006,
+      "name": "光明火焰精灵",
+      "description": "天堂的使者，拥有正义的力量。具有天赋：积分之光6%，勇气之光6%，材料闪耀6%。",
+      "innate_skills": "DQwO",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 11,
+      "level_7_resource_id": 12,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet11_stand.img",
+        "object/pet/pet11_walk.img",
+        "object/pet/pet12_stand.img",
+        "object/pet/pet12_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25007,
+      "name": "小菜娃",
+      "description": "貌不惊人的小菜娃，探险宠物NO.1。具有天赋：菜根之力，菜芯之光，菜花之芬。",
+      "innate_skills": "EhMU",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 13,
+      "level_7_resource_id": 14,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet13_stand.img",
+        "object/pet/pet13_walk.img",
+        "object/pet/pet14_stand.img",
+        "object/pet/pet14_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25008,
+      "name": "流光龙",
+      "description": "守卫稀世琥珀的神龙，乃流光琥珀套装之魂！具有天赋：声望之光6%，积分之光6%，勇气之光6%。",
+      "innate_skills": "Fw0M",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 15,
+      "level_7_resource_id": 16,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet15_stand.img",
+        "object/pet/pet15_walk.img",
+        "object/pet/pet16_stand.img",
+        "object/pet/pet16_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25009,
+      "name": "旺旺狗（第一代）",
+      "description": "具有天赋：勇气之光6%，材料闪耀6%。",
+      "innate_skills": "DA4=",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 17,
+      "level_7_resource_id": 18,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet17_stand.img",
+        "object/pet/pet17_walk.img",
+        "object/pet/pet18_stand.img",
+        "object/pet/pet18_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25010,
+      "name": "Q哥哥",
+      "description": "具有天赋：声望之光，积分之光，勇气之光。",
+      "innate_skills": "GxoZ",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 19,
+      "level_7_resource_id": 20,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet19_stand.img",
+        "object/pet/pet19_walk.img",
+        "object/pet/pet20_stand.img",
+        "object/pet/pet20_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25011,
+      "name": "Q妹妹",
+      "description": "具有天赋：声望之光，积分之光，勇气之光。",
+      "innate_skills": "GxoZ",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 21,
+      "level_7_resource_id": 22,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet21_stand.img",
+        "object/pet/pet21_walk.img",
+        "object/pet/pet22_stand.img",
+        "object/pet/pet22_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25012,
+      "name": "紫光龙",
+      "description": "精灵龙族兵种之一，流光龙进化而成。具有天赋：声望之光7%，积分之光7%，勇气之光7%。",
+      "innate_skills": "IB8e",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 23,
+      "level_7_resource_id": 24,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet23_stand.img",
+        "object/pet/pet23_walk.img",
+        "object/pet/pet24_stand.img",
+        "object/pet/pet24_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25013,
+      "name": "陆行鸟",
+      "description": "奔驰于陆地的巨鸟，战斗中能给予主人极大的帮助。具有天赋：声望之光7%，积分闪耀7%，勇气闪耀7%。",
+      "innate_skills": "ICIh",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 25,
+      "level_7_resource_id": 26,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet25_stand.img",
+        "object/pet/pet25_walk.img",
+        "object/pet/pet26_stand.img",
+        "object/pet/pet26_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25014,
+      "name": "粉便便",
+      "description": "大便都能跟着跑，还有谁能比我叼？具有天赋：声望之光6%，积分之光6%，材料闪耀6%。",
+      "innate_skills": "Fw0O",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 27,
+      "level_7_resource_id": 28,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet27_stand.img",
+        "object/pet/pet27_walk.img",
+        "object/pet/pet28_stand.img",
+        "object/pet/pet28_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25015,
+      "name": "熊猫大宝",
+      "description": "论可爱，熊猫属第一。具有天赋：糖币之光14%，积分闪耀7%，亲密闪耀7%。",
+      "innate_skills": "LiIp",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 29,
+      "level_7_resource_id": 30,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet29_stand.img",
+        "object/pet/pet29_walk.img",
+        "object/pet/pet30_stand.img",
+        "object/pet/pet30_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25016,
+      "name": "咪咪猫（第一代）",
+      "description": "具有天赋：声望之光4%，积分之光4%，勇气之光4%。",
+      "innate_skills": "LCsq",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 31,
+      "level_7_resource_id": 32,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet31_stand.img",
+        "object/pet/pet31_walk.img",
+        "object/pet/pet32_stand.img",
+        "object/pet/pet32_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25017,
+      "name": "爱心宝宝",
+      "description": "含着奶嘴，扭扭屁股的小胖娃。具有天赋：糖币之光10%，声望之光5%，亲密闪耀5%。",
+      "innate_skills": "AQQv",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 33,
+      "level_7_resource_id": 34,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet33_stand.img",
+        "object/pet/pet33_walk.img",
+        "object/pet/pet34_stand.img",
+        "object/pet/pet34_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25018,
+      "name": "梦想宝宝",
+      "description": "扎着辫辫，摆摆屁股的小胖妞。具有天赋：糖币之光10%，材料闪耀5%，亲密闪耀5%。",
+      "innate_skills": "AQUv",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 35,
+      "level_7_resource_id": 36,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet35_stand.img",
+        "object/pet/pet35_walk.img",
+        "object/pet/pet36_stand.img",
+        "object/pet/pet36_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25019,
+      "name": "咪咪猫（第二代）",
+      "description": "具有天赋：声望之光6%，积分之光6%。",
+      "innate_skills": "Fw0=",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 31,
+      "level_7_resource_id": 32,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet31_stand.img",
+        "object/pet/pet31_walk.img",
+        "object/pet/pet32_stand.img",
+        "object/pet/pet32_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25020,
+      "name": "圣诞麋鹿",
+      "description": "圣诞老人给了它与众不同的能力，让节日的温馨快乐无处不在。具有天赋：积分之光7%，勇气之光7%，材料闪耀7%。",
+      "innate_skills": "Hx4n",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 37,
+      "level_7_resource_id": 38,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet37_stand.img",
+        "object/pet/pet37_walk.img",
+        "object/pet/pet38_stand.img",
+        "object/pet/pet38_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25021,
+      "name": "机甲蝎",
+      "description": "威武刚猛的机甲宠物。具有天赋：糖币之光12%，声望之光6%，材料闪耀6%。",
+      "innate_skills": "JBcO",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 39,
+      "level_7_resource_id": 40,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet39_stand.img",
+        "object/pet/pet39_walk.img",
+        "object/pet/pet40_stand.img",
+        "object/pet/pet40_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25022,
+      "name": "幸运牛娃娃",
+      "description": "喜欢撒娇装嫩，带给人们幸运。具有天赋：糖币之光12%，声望之光6%，勇气之光6%。",
+      "innate_skills": "JBcM",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 41,
+      "level_7_resource_id": 42,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet41_stand.img",
+        "object/pet/pet41_walk.img",
+        "object/pet/pet42_stand.img",
+        "object/pet/pet42_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25023,
+      "name": "丘比特",
+      "description": "顽皮的小家伙，谁会是他的下一个目标？具有天赋：积分闪耀6%，勇气闪耀6%，亲密闪耀6%。",
+      "innate_skills": "ES0o",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 45,
+      "level_7_resource_id": 46,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet45_stand.img",
+        "object/pet/pet45_walk.img",
+        "object/pet/pet46_stand.img",
+        "object/pet/pet46_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25024,
+      "name": "旺旺狗（第二代）",
+      "description": "超级可爱无敌的hello dog！小名叫旺财。具有天赋：糖币之光10%，勇气之光5%，材料闪耀5%。",
+      "innate_skills": "AQIF",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 17,
+      "level_7_resource_id": 18,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet17_stand.img",
+        "object/pet/pet17_walk.img",
+        "object/pet/pet18_stand.img",
+        "object/pet/pet18_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25025,
+      "name": "咪咪猫（第三代）",
+      "description": "开始的时候是小咪咪，长大了就是大咪咪。具有天赋：糖币之光10%，声望之光5%，积分之光5%。",
+      "innate_skills": "AQQD",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 31,
+      "level_7_resource_id": 32,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet31_stand.img",
+        "object/pet/pet31_walk.img",
+        "object/pet/pet32_stand.img",
+        "object/pet/pet32_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25026,
+      "name": "爱情Q哥哥",
+      "description": "有憨态可掬的外形，渴望美好的爱情。具有天赋：积分闪耀5%，材料闪耀5%，亲密闪耀5%。",
+      "innate_skills": "BgUv",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 19,
+      "level_7_resource_id": 20,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet19_stand.img",
+        "object/pet/pet19_walk.img",
+        "object/pet/pet20_stand.img",
+        "object/pet/pet20_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25027,
+      "name": "爱情Q妹妹",
+      "description": "有憨态可掬的外形，渴望美好的爱情。具有天赋：声望之光5%，积分之光5%，亲密闪耀5%。",
+      "innate_skills": "BAMv",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 21,
+      "level_7_resource_id": 22,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet21_stand.img",
+        "object/pet/pet21_walk.img",
+        "object/pet/pet22_stand.img",
+        "object/pet/pet22_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25028,
+      "name": "NO.1神兽",
+      "description": "传说中的四大神兽之首。具有天赋：糖币之光12%，材料闪耀6%，亲密闪耀6%。",
+      "innate_skills": "JA4o",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 43,
+      "level_7_resource_id": 44,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet43_stand.img",
+        "object/pet/pet43_walk.img",
+        "object/pet/pet44_stand.img",
+        "object/pet/pet44_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25029,
+      "name": "神龙",
+      "description": "收集所有龙珠，便可召唤神龙。具有天赋：糖币之光14%，勇气闪耀7%，亲密闪耀7%。",
+      "innate_skills": "LiEp",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 47,
+      "level_7_resource_id": 48,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet47_stand.img",
+        "object/pet/pet47_walk.img",
+        "object/pet/pet48_stand.img",
+        "object/pet/pet48_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25030,
+      "name": "火麒麟",
+      "description": "上古神兽之一，能力超凡性格孤傲，只愿效命于他自己挑选的主人。",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 49,
+      "level_7_resource_id": 50,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet49_stand.img",
+        "object/pet/pet49_walk.img",
+        "object/pet/pet50_stand.img",
+        "object/pet/pet50_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25031,
+      "name": "Q红毛",
+      "description": "没什么天赋。",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 51,
+      "level_7_resource_id": 52,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet51_stand.img",
+        "object/pet/pet51_walk.img",
+        "object/pet/pet52_stand.img",
+        "object/pet/pet52_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25032,
+      "name": "河蟹（未上架）",
+      "description": "无效的宠物",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 53,
+      "level_7_resource_id": 54,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet53_stand.img",
+        "object/pet/pet53_walk.img",
+        "object/pet/pet54_stand.img",
+        "object/pet/pet54_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25033,
+      "name": "饲养快女",
+      "description": "让你成就明星梦，把时尚流转Q堂。具有天赋：糖币之光12%，勇气闪耀6%，亲密闪耀6%。",
+      "innate_skills": "JC0o",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 55,
+      "level_7_resource_id": 56,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet55_stand.img",
+        "object/pet/pet55_walk.img",
+        "object/pet/pet56_stand.img",
+        "object/pet/pet56_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25034,
+      "name": "暗夜使者",
+      "description": "传说中暗夜恶魔饲养的蝙蝠，长大了可以变成吸血鬼。具有天赋：声望之光5%，积分闪耀5%，勇气闪耀5%。",
+      "innate_skills": "BAYw",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 57,
+      "level_7_resource_id": 58,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet57_stand.img",
+        "object/pet/pet57_walk.img",
+        "object/pet/pet58_stand.img",
+        "object/pet/pet58_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25035,
+      "name": "囧囧有神",
+      "description": "A级宠物，喜欢搞怪。具有天赋：积分闪耀6%，声望之光6%，亲密闪耀6%。",
+      "innate_skills": "ERco",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 59,
+      "level_7_resource_id": 60,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet59_stand.img",
+        "object/pet/pet59_walk.img",
+        "object/pet/pet60_stand.img",
+        "object/pet/pet60_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25036,
+      "name": "普通的米多",
+      "description": "没什么天赋。",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 3,
+      "level_7_resource_id": 4,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet3_stand.img",
+        "object/pet/pet3_walk.img",
+        "object/pet/pet4_stand.img",
+        "object/pet/pet4_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25037,
+      "name": "勇敢的米多",
+      "description": "具有天赋：勇气之光5%。",
+      "innate_skills": "Ag==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 3,
+      "level_7_resource_id": 4,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet3_stand.img",
+        "object/pet/pet3_walk.img",
+        "object/pet/pet4_stand.img",
+        "object/pet/pet4_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25038,
+      "name": "勤劳的米多",
+      "description": "具有天赋：材料闪耀5%。",
+      "innate_skills": "BQ==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 3,
+      "level_7_resource_id": 4,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet3_stand.img",
+        "object/pet/pet3_walk.img",
+        "object/pet/pet4_stand.img",
+        "object/pet/pet4_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25039,
+      "name": "爱情米多",
+      "description": "具有天赋：声望之光5%，积分之光5%，积分闪耀5%。",
+      "innate_skills": "BAMG",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 3,
+      "level_7_resource_id": 4,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet3_stand.img",
+        "object/pet/pet3_walk.img",
+        "object/pet/pet4_stand.img",
+        "object/pet/pet4_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25040,
+      "name": "嫦娥玉兔",
+      "description": "S级宠物，嫦娥姐姐和玉兔一同陪伴你。具有天赋：积分闪耀7%，材料闪耀7%，亲密闪耀7%。",
+      "innate_skills": "Iicp",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 61,
+      "level_7_resource_id": 62,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet61_stand.img",
+        "object/pet/pet61_walk.img",
+        "object/pet/pet62_stand.img",
+        "object/pet/pet62_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25041,
+      "name": "彩雀",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 63,
+      "level_7_resource_id": 64,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet63_stand.img",
+        "object/pet/pet63_walk.img",
+        "object/pet/pet64_stand.img",
+        "object/pet/pet64_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25042,
+      "name": "雪人",
+      "description": "A级宠物，传递着快乐与祝福。具有天赋：积分闪耀6%，勇气闪耀6%，材料闪耀6%。",
+      "innate_skills": "ES0O",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 65,
+      "level_7_resource_id": 66,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet65_stand.img",
+        "object/pet/pet65_walk.img",
+        "object/pet/pet66_stand.img",
+        "object/pet/pet66_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25043,
+      "name": "白光虎",
+      "description": "S级宠物，只有集齐所有魔斗士的力量，才能驾驭它的力量！具有天赋：积分之光7%，勇气之光7%，亲密闪耀7%。",
+      "innate_skills": "Hx4p",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 67,
+      "level_7_resource_id": 68,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet67_stand.img",
+        "object/pet/pet67_walk.img",
+        "object/pet/pet68_stand.img",
+        "object/pet/pet68_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25044,
+      "name": "乖乖虎",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 69,
+      "level_7_resource_id": 70,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet69_stand.img",
+        "object/pet/pet69_walk.img",
+        "object/pet/pet70_stand.img",
+        "object/pet/pet70_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25045,
+      "name": "小蝴蝶",
+      "description": "挥着花瓣的小蝴蝶，迎来生机勃勃的春天。具有天赋：糖币之光12%，勇气之光6%，亲密闪耀6%。",
+      "innate_skills": "JAwo",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 71,
+      "level_7_resource_id": 72,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet71_stand.img",
+        "object/pet/pet71_walk.img",
+        "object/pet/pet72_stand.img",
+        "object/pet/pet72_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25046,
+      "name": "小雪兔",
+      "description": "B级宠物，白色的雪兔捎来对爱的完美祝福，拥有它的人会获得最真挚的感情。具有天赋：糖币之光10%，积分闪耀5%，勇气闪耀5%。",
+      "innate_skills": "AQYw",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 73,
+      "level_7_resource_id": 74,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet73_stand.img",
+        "object/pet/pet73_walk.img",
+        "object/pet/pet74_stand.img",
+        "object/pet/pet74_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25047,
+      "name": "肥松鼠",
+      "description": "A级宠物，胖胖的露脐装，两个特色大板牙和毛茸茸的大尾巴，很可爱！具有天赋：糖币之光12%，积分闪耀6%，勇气闪耀6%。",
+      "innate_skills": "JBEt",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 75,
+      "level_7_resource_id": 76,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet75_stand.img",
+        "object/pet/pet75_walk.img",
+        "object/pet/pet76_stand.img",
+        "object/pet/pet76_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25048,
+      "name": "飞骷髅",
+      "description": "B级宠物，看见我眼里闪烁的红光了吗？还不赶紧退散！具有天赋：声望之光5%，积分之光5%，勇气之光5%。",
+      "innate_skills": "BAMC",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 77,
+      "level_7_resource_id": 78,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet77_stand.img",
+        "object/pet/pet77_walk.img",
+        "object/pet/pet78_stand.img",
+        "object/pet/pet78_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25049,
+      "name": "小萝莉",
+      "description": "具有天赋：积分闪耀5%，勇气闪耀5%，材料闪耀5%。",
+      "innate_skills": "BjAF",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 79,
+      "level_7_resource_id": 80,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet79_stand.img",
+        "object/pet/pet79_walk.img",
+        "object/pet/pet80_stand.img",
+        "object/pet/pet80_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25050,
+      "name": "格里芬",
+      "description": "S级宠物，传说中的格里芬，也能驯化成宠物？带上它绝对是人群中最拉风的！具有天赋：积分之光7%，勇气闪耀7%，材料闪耀7%。",
+      "innate_skills": "HyEn",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 81,
+      "level_7_resource_id": 82,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet81_stand.img",
+        "object/pet/pet81_walk.img",
+        "object/pet/pet82_stand.img",
+        "object/pet/pet82_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25051,
+      "name": "私房猫",
+      "description": "B级宠物，我是一只爱恶作剧的小猫，喜欢牛奶和松饼！具有天赋：糖币之光10%，声望之光5%，积分之光5%。",
+      "innate_skills": "AQQD",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 83,
+      "level_7_resource_id": 84,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet83_stand.img",
+        "object/pet/pet83_walk.img",
+        "object/pet/pet84_stand.img",
+        "object/pet/pet84_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25052,
+      "name": "外星人",
+      "description": "C级宠物，不仅模样长得异常可爱，就连行为都古怪的很呢！具有天赋：积分闪耀5%，勇气闪耀5%。",
+      "innate_skills": "BjA=",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 85,
+      "level_7_resource_id": 86,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet85_stand.img",
+        "object/pet/pet85_walk.img",
+        "object/pet/pet86_stand.img",
+        "object/pet/pet86_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25053,
+      "name": "贵妇犬",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 87,
+      "level_7_resource_id": 88,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet87_stand.img",
+        "object/pet/pet87_walk.img",
+        "object/pet/pet88_stand.img",
+        "object/pet/pet88_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25054,
+      "name": "肥胖龙",
+      "description": "巨龙宠物，只有驯龙高手才有能力饲养。具有天赋：糖币之光14%，积分闪耀7%，材料闪耀7%。",
+      "innate_skills": "LiIn",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 89,
+      "level_7_resource_id": 90,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet89_stand.img",
+        "object/pet/pet89_walk.img",
+        "object/pet/pet90_stand.img",
+        "object/pet/pet90_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25055,
+      "name": "新年兔子",
+      "description": "A级宠物，兔年的专属大使，它就是活泼可爱的小兔子。具有天赋：声望之光6%，积分闪耀6%，勇气闪耀6%。",
+      "innate_skills": "FxEt",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 91,
+      "level_7_resource_id": 92,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet91_stand.img",
+        "object/pet/pet91_walk.img",
+        "object/pet/pet92_stand.img",
+        "object/pet/pet92_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25056,
+      "name": "龙猫",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 93,
+      "level_7_resource_id": 94,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet93_stand.img",
+        "object/pet/pet93_walk.img",
+        "object/pet/pet94_stand.img",
+        "object/pet/pet94_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25057,
+      "name": "独角兽",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 95,
+      "level_7_resource_id": 96,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet95_stand.img",
+        "object/pet/pet95_walk.img",
+        "object/pet/pet96_stand.img",
+        "object/pet/pet96_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25058,
+      "name": "幽灵丸子",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 97,
+      "level_7_resource_id": 98,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet97_stand.img",
+        "object/pet/pet97_walk.img",
+        "object/pet/pet98_stand.img",
+        "object/pet/pet98_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25071,
+      "name": "普通的恶魔",
+      "description": "没什么天赋。",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 5,
+      "level_7_resource_id": 6,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet5_stand.img",
+        "object/pet/pet5_walk.img",
+        "object/pet/pet6_stand.img",
+        "object/pet/pet6_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25072,
+      "name": "善战的恶魔",
+      "description": "具有天赋：积分之光5%。",
+      "innate_skills": "Aw==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 5,
+      "level_7_resource_id": 6,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet5_stand.img",
+        "object/pet/pet5_walk.img",
+        "object/pet/pet6_stand.img",
+        "object/pet/pet6_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25073,
+      "name": "好胜的恶魔",
+      "description": "具有天赋：积分闪耀5%。",
+      "innate_skills": "Bg==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 5,
+      "level_7_resource_id": 6,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet5_stand.img",
+        "object/pet/pet5_walk.img",
+        "object/pet/pet6_stand.img",
+        "object/pet/pet6_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25079,
+      "name": "尊崇的善战的恶魔",
+      "description": "具有天赋：声望之光5%，积分之光5%。",
+      "innate_skills": "BAM=",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 5,
+      "level_7_resource_id": 6,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet5_stand.img",
+        "object/pet/pet5_walk.img",
+        "object/pet/pet6_stand.img",
+        "object/pet/pet6_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25096,
+      "name": "尊崇的勇敢的善战的恶魔",
+      "description": "具有天赋：声望之光5%，积分之光5%，勇气之光5%。",
+      "innate_skills": "BAMC",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 5,
+      "level_7_resource_id": 6,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet5_stand.img",
+        "object/pet/pet5_walk.img",
+        "object/pet/pet6_stand.img",
+        "object/pet/pet6_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25106,
+      "name": "普通的小猪",
+      "description": "没什么天赋。",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 7,
+      "level_7_resource_id": 8,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet7_stand.img",
+        "object/pet/pet7_walk.img",
+        "object/pet/pet8_stand.img",
+        "object/pet/pet8_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25107,
+      "name": "可爱的小猪",
+      "description": "具有天赋：亲密闪耀5%。",
+      "innate_skills": "Lw==",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 7,
+      "level_7_resource_id": 8,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet7_stand.img",
+        "object/pet/pet7_walk.img",
+        "object/pet/pet8_stand.img",
+        "object/pet/pet8_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25114,
+      "name": "勇敢的善战的小猪",
+      "description": "具有天赋：积分之光5%，勇气之光5%。",
+      "innate_skills": "AwI=",
+      "talent_source": "installed-pet-card-description",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 7,
+      "level_7_resource_id": 8,
+      "source": "client-config",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet7_stand.img",
+        "object/pet/pet7_walk.img",
+        "object/pet/pet8_stand.img",
+        "object/pet/pet8_walk.img",
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25901,
+      "name": "毛毛兽",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 101,
+      "level_7_resource_id": 102,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet101_stand.img",
+        "object/pet/pet101_walk.img",
+        "object/pet/pet102_stand.img",
+        "object/pet/pet102_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25902,
+      "name": "树苗",
+      "description": "S级宠物，QQ堂植树造林环保大使。具有天赋：声望之光7%，积分之光7%，勇气之光7%。",
+      "innate_skills": "IB8e",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 103,
+      "level_7_resource_id": 104,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet103_stand.img",
+        "object/pet/pet103_walk.img",
+        "object/pet/pet104_stand.img",
+        "object/pet/pet104_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25903,
+      "name": "帝黑星",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 105,
+      "level_7_resource_id": 106,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet105_stand.img",
+        "object/pet/pet105_walk.img",
+        "object/pet/pet106_stand.img",
+        "object/pet/pet106_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25904,
+      "name": "哆唻咪海豚",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 107,
+      "level_7_resource_id": 108,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet107_stand.img",
+        "object/pet/pet107_walk.img",
+        "object/pet/pet108_stand.img",
+        "object/pet/pet108_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25905,
+      "name": "兔子酷比",
+      "description": "A级宠物，今年中秋现身酷比王国，必将成为王国新宠。具有天赋：亲密闪耀6%，声望之光6%，积分之光6%。",
+      "innate_skills": "KBcN",
+      "talent_source": "user-supplied-historical-talents-20261023; native-PetCfg-skill-IDs",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 109,
+      "level_7_resource_id": 110,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet109_stand.img",
+        "object/pet/pet109_walk.img",
+        "object/pet/pet110_stand.img",
+        "object/pet/pet110_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25906,
+      "name": "九尾狐",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 111,
+      "level_7_resource_id": 112,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet111_stand.img",
+        "object/pet/pet111_walk.img",
+        "object/pet/pet112_stand.img",
+        "object/pet/pet112_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25907,
+      "name": "糖果国王",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 113,
+      "level_7_resource_id": 114,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet113_stand.img",
+        "object/pet/pet113_walk.img",
+        "object/pet/pet114_stand.img",
+        "object/pet/pet114_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25908,
+      "name": "宝石小鬼",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 115,
+      "level_7_resource_id": 116,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet115_stand.img",
+        "object/pet/pet115_walk.img",
+        "object/pet/pet116_stand.img",
+        "object/pet/pet116_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25909,
+      "name": "圣诞老人",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 117,
+      "level_7_resource_id": 118,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet117_stand.img",
+        "object/pet/pet117_walk.img",
+        "object/pet/pet118_stand.img",
+        "object/pet/pet118_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25910,
+      "name": "胖小丁",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 119,
+      "level_7_resource_id": 120,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet119_stand.img",
+        "object/pet/pet119_walk.img",
+        "object/pet/pet120_stand.img",
+        "object/pet/pet120_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25911,
+      "name": "龙宝宝",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 121,
+      "level_7_resource_id": 122,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet121_stand.img",
+        "object/pet/pet121_walk.img",
+        "object/pet/pet122_stand.img",
+        "object/pet/pet122_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25912,
+      "name": "独角兽2",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 123,
+      "level_7_resource_id": 124,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet123_stand.img",
+        "object/pet/pet123_walk.img",
+        "object/pet/pet124_stand.img",
+        "object/pet/pet124_walk.img"
+      ]
+    },
+    {
+      "pet_type_id": 25913,
+      "name": "孙小圣",
+      "level_1_resource_id": 100,
+      "level_4_resource_id": 125,
+      "level_7_resource_id": 125,
+      "source": "local-client-extension",
+      "assignable": true,
+      "resource_status": "complete",
+      "installed_resources": [
+        "object/pet/pet100_stand.img",
+        "object/pet/pet100_walk.img",
+        "object/pet/pet125_stand.img",
+        "object/pet/pet125_walk.img"
+      ]
+    }
+  ],
+  "card_links": [
+    {
+      "item_id": 28001,
+      "resource_id": 1,
+      "pet_type_id": 25001,
+      "name": "普通的酷比",
+      "description": "没什么天赋。"
+    },
+    {
+      "item_id": 28002,
+      "resource_id": 2,
+      "pet_type_id": 25002,
+      "name": "富有的酷比",
+      "description": "具有天赋：糖币之光10%。",
+      "innate_skills": "AQ=="
+    },
+    {
+      "item_id": 28003,
+      "resource_id": 3,
+      "pet_type_id": 25003,
+      "name": "尊崇的酷比",
+      "description": "具有天赋：声望之光5%。",
+      "innate_skills": "BA=="
+    },
+    {
+      "item_id": 28004,
+      "resource_id": 4,
+      "pet_type_id": 25036,
+      "name": "普通的米多",
+      "description": "没什么天赋。"
+    },
+    {
+      "item_id": 28005,
+      "resource_id": 5,
+      "pet_type_id": 25037,
+      "name": "勇敢的米多",
+      "description": "具有天赋：勇气之光5%。",
+      "innate_skills": "Ag=="
+    },
+    {
+      "item_id": 28006,
+      "resource_id": 6,
+      "pet_type_id": 25038,
+      "name": "勤劳的米多",
+      "description": "具有天赋：材料闪耀5%。",
+      "innate_skills": "BQ=="
+    },
+    {
+      "item_id": 28007,
+      "resource_id": 7,
+      "pet_type_id": 25106,
+      "name": "普通的小猪",
+      "description": "没什么天赋。"
+    },
+    {
+      "item_id": 28008,
+      "resource_id": 8,
+      "pet_type_id": 25114,
+      "name": "布鲁斯",
+      "description": "具有天赋：积分之光5%，勇气之光5%。",
+      "innate_skills": "AwI="
+    },
+    {
+      "item_id": 28009,
+      "resource_id": 9,
+      "pet_type_id": 25071,
+      "name": "普通的恶魔",
+      "description": "没什么天赋。"
+    },
+    {
+      "item_id": 28010,
+      "resource_id": 10,
+      "pet_type_id": 25072,
+      "name": "善战的恶魔",
+      "description": "具有天赋：积分之光5%。",
+      "innate_skills": "Aw=="
+    },
+    {
+      "item_id": 28011,
+      "resource_id": 11,
+      "pet_type_id": 25073,
+      "name": "好胜的恶魔",
+      "description": "具有天赋：积分闪耀5%。",
+      "innate_skills": "Bg=="
+    },
+    {
+      "item_id": 28012,
+      "resource_id": 12,
+      "pet_type_id": 25079,
+      "name": "琪琪",
+      "description": "具有天赋：声望之光5%，积分之光5%。",
+      "innate_skills": "BAM="
+    },
+    {
+      "item_id": 28013,
+      "resource_id": 13,
+      "pet_type_id": 25096,
+      "name": "恩佐",
+      "description": "具有天赋：声望之光5%，积分之光5%，勇气之光5%。",
+      "innate_skills": "BAMC"
+    },
+    {
+      "item_id": 28014,
+      "resource_id": 14,
+      "pet_type_id": 25004,
+      "name": "爱情酷比",
+      "description": "具有天赋：声望之光5%，勇气之光5%，材料闪耀5%。",
+      "innate_skills": "BAIF"
+    },
+    {
+      "item_id": 28015,
+      "resource_id": 15,
+      "pet_type_id": 25039,
+      "name": "爱情米多",
+      "description": "具有天赋：声望之光5%，积分之光5%，积分闪耀5%。",
+      "innate_skills": "BAMG"
+    },
+    {
+      "item_id": 28016,
+      "resource_id": 16,
+      "pet_type_id": 25005,
+      "name": "黑暗火焰精灵",
+      "description": "恶魔的使者，拥有邪恶的力量。具有天赋：积分之光6%，勇气之光6%，积分闪耀6%。",
+      "innate_skills": "DQwR"
+    },
+    {
+      "item_id": 28017,
+      "resource_id": 17,
+      "pet_type_id": 25006,
+      "name": "光明火焰精灵",
+      "description": "天堂的使者，拥有正义的力量。具有天赋：积分之光6%，勇气之光6%，材料闪耀6%。",
+      "innate_skills": "DQwO"
+    },
+    {
+      "item_id": 28018,
+      "resource_id": 18,
+      "pet_type_id": 25007,
+      "name": "小菜娃",
+      "description": "貌不惊人的小菜娃，探险宠物NO.1。具有天赋：菜根之力，菜芯之光，菜花之芬。",
+      "innate_skills": "EhMU"
+    },
+    {
+      "item_id": 28019,
+      "resource_id": 19,
+      "pet_type_id": 25008,
+      "name": "流光龙",
+      "description": "守卫稀世琥珀的神龙，乃流光琥珀套装之魂！具有天赋：声望之光6%，积分之光6%，勇气之光6%。",
+      "innate_skills": "Fw0M"
+    },
+    {
+      "item_id": 28020,
+      "resource_id": 20,
+      "pet_type_id": 25009,
+      "name": "hello dog",
+      "description": "具有天赋：勇气之光6%，材料闪耀6%。",
+      "innate_skills": "DA4="
+    },
+    {
+      "item_id": 28021,
+      "resource_id": 21,
+      "pet_type_id": 25010,
+      "name": "Q哥哥",
+      "description": "具有天赋：声望之光，积分之光，勇气之光。",
+      "innate_skills": "GxoZ"
+    },
+    {
+      "item_id": 28022,
+      "resource_id": 22,
+      "pet_type_id": 25011,
+      "name": "Q妹妹",
+      "description": "具有天赋：声望之光，积分之光，勇气之光。",
+      "innate_skills": "GxoZ"
+    },
+    {
+      "item_id": 28023,
+      "resource_id": 23,
+      "pet_type_id": 25012,
+      "name": "紫光龙",
+      "description": "精灵龙族兵种之一，流光龙进化而成。具有天赋：声望之光7%，积分之光7%，勇气之光7%。",
+      "innate_skills": "IB8e"
+    },
+    {
+      "item_id": 28024,
+      "resource_id": 24,
+      "pet_type_id": 25013,
+      "name": "陆行鸟",
+      "description": "奔驰于陆地的巨鸟，战斗中能给予主人极大的帮助。具有天赋：声望之光7%，积分闪耀7%，勇气闪耀7%。",
+      "innate_skills": "ICIh"
+    },
+    {
+      "item_id": 28025,
+      "resource_id": 25,
+      "pet_type_id": 25014,
+      "name": "粉便便",
+      "description": "大便都能跟着跑，还有谁能比我叼？具有天赋：声望之光6%，积分之光6%，材料闪耀6%。",
+      "innate_skills": "Fw0O"
+    },
+    {
+      "item_id": 28026,
+      "resource_id": 26,
+      "pet_type_id": 25015,
+      "name": "熊猫大宝",
+      "description": "论可爱，熊猫属第一。具有天赋：糖币之光14%，积分闪耀7%，亲密闪耀7%。",
+      "innate_skills": "LiIp"
+    },
+    {
+      "item_id": 28027,
+      "resource_id": 27,
+      "pet_type_id": 25016,
+      "name": "咪咪猫",
+      "description": "具有天赋：声望之光4%，积分之光4%，勇气之光4%。",
+      "innate_skills": "LCsq"
+    },
+    {
+      "item_id": 28028,
+      "resource_id": 28,
+      "pet_type_id": 25017,
+      "name": "爱心宝宝",
+      "description": "含着奶嘴，扭扭屁股的小胖娃。具有天赋：糖币之光10%，声望之光5%，亲密闪耀5%。",
+      "innate_skills": "AQQv"
+    },
+    {
+      "item_id": 28029,
+      "resource_id": 29,
+      "pet_type_id": 25018,
+      "name": "梦想宝宝",
+      "description": "扎着辫辫，摆摆屁股的小胖妞。具有天赋：糖币之光10%，材料闪耀5%，亲密闪耀5%。",
+      "innate_skills": "AQUv"
+    },
+    {
+      "item_id": 28030,
+      "resource_id": 30,
+      "pet_type_id": 25019,
+      "name": "咪咪猫",
+      "description": "具有天赋：声望之光6%，积分之光6%。",
+      "innate_skills": "Fw0="
+    },
+    {
+      "item_id": 28031,
+      "resource_id": 31,
+      "pet_type_id": 25020,
+      "name": "圣诞麋鹿",
+      "description": "圣诞老人给了它与众不同的能力，让节日的温馨快乐无处不在。具有天赋：积分之光7%，勇气之光7%，材料闪耀7%。",
+      "innate_skills": "Hx4n"
+    },
+    {
+      "item_id": 28032,
+      "resource_id": 32,
+      "pet_type_id": 25021,
+      "name": "机甲蝎",
+      "description": "威武刚猛的机甲宠物。具有天赋：糖币之光12%，声望之光6%，材料闪耀6%。",
+      "innate_skills": "JBcO"
+    },
+    {
+      "item_id": 28033,
+      "resource_id": 33,
+      "pet_type_id": 25022,
+      "name": "幸运牛娃娃",
+      "description": "喜欢撒娇装嫩，带给人们幸运。具有天赋：糖币之光12%，声望之光6%，勇气之光6%。",
+      "innate_skills": "JBcM"
+    },
+    {
+      "item_id": 28034,
+      "resource_id": 34,
+      "pet_type_id": 25023,
+      "name": "丘比特",
+      "description": "顽皮的小家伙，谁会是他的下一个目标？具有天赋：积分闪耀6%，勇气闪耀6%，亲密闪耀6%。",
+      "innate_skills": "ES0o"
+    },
+    {
+      "item_id": 28035,
+      "resource_id": 35,
+      "pet_type_id": 25107,
+      "name": "可爱的小猪",
+      "description": "具有天赋：亲密闪耀5%。",
+      "innate_skills": "Lw=="
+    },
+    {
+      "item_id": 28036,
+      "resource_id": 36,
+      "pet_type_id": 25024,
+      "name": "旺旺狗",
+      "description": "超级可爱无敌的hello dog！小名叫旺财。具有天赋：糖币之光10%，勇气之光5%，材料闪耀5%。",
+      "innate_skills": "AQIF"
+    },
+    {
+      "item_id": 28037,
+      "resource_id": 37,
+      "pet_type_id": 25025,
+      "name": "咪咪猫",
+      "description": "开始的时候是小咪咪，长大了就是大咪咪。具有天赋：糖币之光10%，声望之光5%，积分之光5%。",
+      "innate_skills": "AQQD"
+    },
+    {
+      "item_id": 28038,
+      "resource_id": 38,
+      "pet_type_id": 25026,
+      "name": "爱情Q哥哥",
+      "description": "有憨态可掬的外形，渴望美好的爱情。具有天赋：积分闪耀5%，材料闪耀5%，亲密闪耀5%。",
+      "innate_skills": "BgUv"
+    },
+    {
+      "item_id": 28039,
+      "resource_id": 39,
+      "pet_type_id": 25027,
+      "name": "爱情Q妹妹",
+      "description": "有憨态可掬的外形，渴望美好的爱情。具有天赋：声望之光5%，积分之光5%，亲密闪耀5%。",
+      "innate_skills": "BAMv"
+    },
+    {
+      "item_id": 28040,
+      "resource_id": 40,
+      "pet_type_id": 25028,
+      "name": "NO.1神兽",
+      "description": "传说中的四大神兽之首。具有天赋：糖币之光12%，材料闪耀6%，亲密闪耀6%。",
+      "innate_skills": "JA4o"
+    },
+    {
+      "item_id": 28041,
+      "resource_id": 41,
+      "pet_type_id": 25029,
+      "name": "神龙",
+      "description": "收集所有龙珠，便可召唤神龙。具有天赋：糖币之光14%，勇气闪耀7%，亲密闪耀7%。",
+      "innate_skills": "LiEp"
+    },
+    {
+      "item_id": 28042,
+      "resource_id": 42,
+      "pet_type_id": 25030,
+      "name": "至尊火麒麟",
+      "description": "上古神兽之一，能力超凡性格孤傲，只愿效命于他自己挑选的主人。"
+    },
+    {
+      "item_id": 28043,
+      "resource_id": 43,
+      "pet_type_id": 25031,
+      "name": "Q红毛",
+      "description": "没什么天赋。"
+    },
+    {
+      "item_id": 28044,
+      "resource_id": 44,
+      "pet_type_id": 25032,
+      "name": "pangxie",
+      "description": "无效的宠物"
+    },
+    {
+      "item_id": 28045,
+      "resource_id": 45,
+      "pet_type_id": 25033,
+      "name": "饲养快女",
+      "description": "让你成就明星梦，把时尚流转Q堂。具有天赋：糖币之光12%，勇气闪耀6%，亲密闪耀6%。",
+      "innate_skills": "JC0o"
+    },
+    {
+      "item_id": 28046,
+      "resource_id": 46,
+      "pet_type_id": 25034,
+      "name": "暗夜使者",
+      "description": "传说中暗夜恶魔饲养的蝙蝠，长大了可以变成吸血鬼。具有天赋：声望之光5%，积分闪耀5%，勇气闪耀5%。",
+      "innate_skills": "BAYw"
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": 1,
+      "name": "糖币之光10%",
+      "description": "宠物天赋之一，可以使获得的糖币增加10%，天赋效果可以和糖币加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 2,
+      "name": "勇气之光5%",
+      "description": "宠物天赋之一，可以使获得的勇气增加5%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 3,
+      "name": "积分之光5%",
+      "description": "宠物天赋之一，可以使获得的积分增加5%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 4,
+      "name": "声望之光5%",
+      "description": "宠物天赋之一，可以使获得的声望增加5%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 5,
+      "name": "材料闪耀5%",
+      "description": "宠物天赋之一，有5%的概率使获得的材料加倍，天赋效果可以和材料多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 6,
+      "name": "积分闪耀5%",
+      "description": "宠物天赋之一，有5%的概率使获得的积分加倍，天赋效果可以和积分多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 7,
+      "name": "永结同心",
+      "description": "宠物天赋之一，可以使获得的勇气增加5%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 8,
+      "name": "心心相印",
+      "description": "宠物天赋之一，可以使获得的积分增加5%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 9,
+      "name": "海誓山盟",
+      "description": "宠物天赋之一，可以使获得的声望增加5%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 10,
+      "name": "比翼双飞",
+      "description": "宠物天赋之一，有5%的概率使获得的积分加倍，天赋效果可以和积分多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 11,
+      "name": "相亲相爱",
+      "description": "宠物天赋之一，有5%的概率使获得的材料加倍，天赋效果可以和材料多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 12,
+      "name": "勇气之光6%",
+      "description": "宠物天赋之一，可以使获得的勇气增加6%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 13,
+      "name": "积分之光6%",
+      "description": "宠物天赋之一，可以使获得的积分增加6%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 14,
+      "name": "材料闪耀6%",
+      "description": "宠物天赋之一，有6%的概率使获得的材料加倍，天赋效果可以和材料多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 15,
+      "name": "勇气之光6%",
+      "description": "宠物天赋之一，可以使获得的勇气增加6%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 16,
+      "name": "积分之光6%",
+      "description": "宠物天赋之一，可以使获得的积分增加6%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 17,
+      "name": "积分闪耀6%",
+      "description": "宠物天赋之一，有6%的概率使获得的积分加倍，天赋效果可以和积分多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 18,
+      "name": "菜根之力",
+      "description": "宠物天赋之一，有5%的概率使获得的材料加倍，天赋效果可以和材料多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 19,
+      "name": "菜芯之光",
+      "description": "宠物天赋之一，可以使获得的勇气增加5%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 20,
+      "name": "菜花之芬",
+      "description": "宠物天赋之一，有一定概率使获得的勇气加倍，天赋效果可以和勇气多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 21,
+      "name": "勇气之光6%",
+      "description": "宠物天赋之一，可以使获得的勇气增加6%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 22,
+      "name": "积分之光6%",
+      "description": "宠物天赋之一，可以使获得的积分增加6%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 23,
+      "name": "声望之光6%",
+      "description": "宠物天赋之一，可以使获得的声望增加6%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 24,
+      "name": "勇气之光6%",
+      "description": "宠物天赋之一，可以使获得的勇气增加6%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 25,
+      "name": "勇气之光",
+      "description": "宠物天赋之一，可以使获得的勇气得到增加，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 26,
+      "name": "积分之光",
+      "description": "宠物天赋之一，可以使获得的积分得到增加，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 27,
+      "name": "声望之光",
+      "description": "宠物天赋之一，可以使获得的声望得到增加，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 28,
+      "name": "积分之光",
+      "description": "宠物天赋之一，可以使获得的积分得到增加，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 29,
+      "name": "勇气之光",
+      "description": "宠物天赋之一，可以使获得的勇气得到增加，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 30,
+      "name": "勇气之光7%",
+      "description": "宠物天赋之一，可以使获得的勇气增加7%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 31,
+      "name": "积分之光7%",
+      "description": "宠物天赋之一，可以使获得的积分增加7%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 32,
+      "name": "声望之光7%",
+      "description": "宠物天赋之一，可以使获得的声望增加7%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 33,
+      "name": "勇气闪耀7%",
+      "description": "宠物天赋之一，有7%的概率使获得的勇气加倍，天赋效果可以和勇气多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 34,
+      "name": "积分闪耀7%",
+      "description": "宠物天赋之一，有7%的概率使获得的积分加倍，天赋效果可以和积分多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 35,
+      "name": "声望之光7%",
+      "description": "宠物天赋之一，可以使获得的声望增加7%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 36,
+      "name": "糖币之光12%",
+      "description": "宠物天赋之一，可以使获得的糖币增加12%，天赋效果可以和糖币加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 37,
+      "name": "积分之光6%",
+      "description": "宠物天赋之一，可以使获得的积分增加6%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 38,
+      "name": "声望之光6%",
+      "description": "宠物天赋之一，可以使获得的声望增加6%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 39,
+      "name": "材料闪耀7%",
+      "description": "宠物天赋之一，有7%的概率使获得的材料加倍，天赋效果可以和材料多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 40,
+      "name": "亲密闪耀6%",
+      "description": "宠物天赋之一，有6%的概率使获得的亲密加倍，天赋效果可以和亲密多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 41,
+      "name": "亲密闪耀7%",
+      "description": "宠物天赋之一，有7%的概率使获得的亲密加倍，天赋效果可以和亲密多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 42,
+      "name": "勇气之光4%",
+      "description": "宠物天赋之一，可以使获得的勇气增加4%，天赋效果可以和勇气加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 43,
+      "name": "积分之光4%",
+      "description": "宠物天赋之一，可以使获得的积分增加4%，天赋效果可以和积分加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 44,
+      "name": "声望之光4%",
+      "description": "宠物天赋之一，可以使获得的声望增加4%，天赋效果可以和声望加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 45,
+      "name": "勇气闪耀6%",
+      "description": "宠物天赋之一，有6%的概率使获得的勇气加倍，天赋效果可以和勇气多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 46,
+      "name": "糖币之光14%",
+      "description": "宠物天赋之一，可以使获得的糖币增加14%，天赋效果可以和糖币加加技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 47,
+      "name": "亲密闪耀5%",
+      "description": "宠物天赋之一，有5%的概率使获得的亲密加倍，天赋效果可以和亲密多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 48,
+      "name": "勇气闪耀5%",
+      "description": "宠物天赋之一，有5%的概率使获得的勇气加倍，天赋效果可以和勇气多多技能效果叠加。",
+      "learned": false
+    },
+    {
+      "skill_id": 51,
+      "name": "糖币加加1级",
+      "description": "宠物一级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 54,
+      "name": "糖币加加2级",
+      "description": "宠物二级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 57,
+      "name": "糖币加加3级",
+      "description": "宠物三级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 60,
+      "name": "糖币加加4级",
+      "description": "宠物四级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 63,
+      "name": "糖币加加5级",
+      "description": "宠物五级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 66,
+      "name": "糖币加加6级",
+      "description": "宠物六级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 69,
+      "name": "糖币加加7级",
+      "description": "宠物七级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 72,
+      "name": "糖币加加8级",
+      "description": "宠物八级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 75,
+      "name": "糖币加加9级",
+      "description": "宠物九级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 78,
+      "name": "糖币加加10级",
+      "description": "宠物十级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 81,
+      "name": "勇气加加1级",
+      "description": "宠物一级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 82,
+      "name": "勇气多多1级",
+      "description": "宠物一级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 84,
+      "name": "勇气加加2级",
+      "description": "宠物二级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 85,
+      "name": "勇气多多2级",
+      "description": "宠物二级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 87,
+      "name": "勇气加加3级",
+      "description": "宠物三级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 88,
+      "name": "勇气多多3级",
+      "description": "宠物三级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 90,
+      "name": "勇气加加4级",
+      "description": "宠物四级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 91,
+      "name": "勇气多多4级",
+      "description": "宠物四级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 93,
+      "name": "勇气加加5级",
+      "description": "宠物五级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 94,
+      "name": "勇气多多5级",
+      "description": "宠物五级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 96,
+      "name": "勇气加加6级",
+      "description": "宠物六级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 97,
+      "name": "勇气多多6级",
+      "description": "宠物六级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 99,
+      "name": "勇气加加7级",
+      "description": "宠物七级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 100,
+      "name": "勇气多多7级",
+      "description": "宠物七级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 102,
+      "name": "勇气加加8级",
+      "description": "宠物八级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 103,
+      "name": "勇气多多8级",
+      "description": "宠物八级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 105,
+      "name": "勇气加加9级",
+      "description": "宠物九级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 106,
+      "name": "勇气多多9级",
+      "description": "宠物九级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 108,
+      "name": "勇气加加10级",
+      "description": "宠物十级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 109,
+      "name": "勇气多多10级",
+      "description": "宠物十级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 111,
+      "name": "积分加加1级",
+      "description": "宠物一级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 112,
+      "name": "亲密多多1级",
+      "description": "宠物一级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 114,
+      "name": "积分加加2级",
+      "description": "宠物二级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 115,
+      "name": "亲密多多2级",
+      "description": "宠物二级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 117,
+      "name": "积分加加3级",
+      "description": "宠物三级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 118,
+      "name": "亲密多多3级",
+      "description": "宠物三级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 120,
+      "name": "积分加加4级",
+      "description": "宠物四级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 121,
+      "name": "亲密多多4级",
+      "description": "宠物四级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 123,
+      "name": "积分加加5级",
+      "description": "宠物五级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 124,
+      "name": "亲密多多5级",
+      "description": "宠物五级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 126,
+      "name": "积分加加6级",
+      "description": "宠物六级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 127,
+      "name": "亲密多多6级",
+      "description": "宠物六级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 129,
+      "name": "积分加加7级",
+      "description": "宠物七级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 130,
+      "name": "亲密多多7级",
+      "description": "宠物七级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 132,
+      "name": "积分加加8级",
+      "description": "宠物八级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 133,
+      "name": "亲密多多8级",
+      "description": "宠物八级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 135,
+      "name": "积分加加9级",
+      "description": "宠物九级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 136,
+      "name": "亲密多多9级",
+      "description": "宠物九级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 138,
+      "name": "积分加加10级",
+      "description": "宠物十级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 139,
+      "name": "亲密多多10级",
+      "description": "宠物十级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 141,
+      "name": "声望加加1级",
+      "description": "宠物一级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 142,
+      "name": "声望多多1级",
+      "description": "宠物一级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 144,
+      "name": "声望加加2级",
+      "description": "宠物二级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 145,
+      "name": "声望多多2级",
+      "description": "宠物二级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 147,
+      "name": "声望加加3级",
+      "description": "宠物三级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 148,
+      "name": "声望多多3级",
+      "description": "宠物三级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 150,
+      "name": "声望加加4级",
+      "description": "宠物四级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 151,
+      "name": "声望多多4级",
+      "description": "宠物四级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 153,
+      "name": "声望加加5级",
+      "description": "宠物五级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 154,
+      "name": "声望多多5级",
+      "description": "宠物五级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 156,
+      "name": "声望加加6级",
+      "description": "宠物六级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 157,
+      "name": "声望多多6级",
+      "description": "宠物六级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 159,
+      "name": "声望加加7级",
+      "description": "宠物七级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 160,
+      "name": "声望多多7级",
+      "description": "宠物七级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 162,
+      "name": "声望加加8级",
+      "description": "宠物八级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 163,
+      "name": "声望多多8级",
+      "description": "宠物八级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 165,
+      "name": "声望加加9级",
+      "description": "宠物九级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 166,
+      "name": "声望多多9级",
+      "description": "宠物九级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 168,
+      "name": "声望加加10级",
+      "description": "宠物十级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 169,
+      "name": "声望多多10级",
+      "description": "宠物十级技能之一，有3%的概率使获得的声望翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 171,
+      "name": "材料多多1级",
+      "description": "宠物一级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 174,
+      "name": "材料多多2级",
+      "description": "宠物二级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 177,
+      "name": "材料多多3级",
+      "description": "宠物三级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 180,
+      "name": "材料多多4级",
+      "description": "宠物四级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 183,
+      "name": "材料多多5级",
+      "description": "宠物五级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 186,
+      "name": "材料多多6级",
+      "description": "宠物六级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 189,
+      "name": "材料多多7级",
+      "description": "宠物七级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 192,
+      "name": "材料多多8级",
+      "description": "宠物八级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 195,
+      "name": "材料多多9级",
+      "description": "宠物九级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 198,
+      "name": "材料多多10级",
+      "description": "宠物十级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 201,
+      "name": "积分多多1级",
+      "description": "宠物一级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 202,
+      "name": "亲密加加1级",
+      "description": "宠物一级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "level": 1,
+      "learned": true
+    },
+    {
+      "skill_id": 204,
+      "name": "积分多多2级",
+      "description": "宠物二级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 205,
+      "name": "亲密加加2级",
+      "description": "宠物二级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "level": 2,
+      "learned": true
+    },
+    {
+      "skill_id": 207,
+      "name": "积分多多3级",
+      "description": "宠物三级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 208,
+      "name": "亲密加加3级",
+      "description": "宠物三级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "level": 3,
+      "learned": true
+    },
+    {
+      "skill_id": 210,
+      "name": "积分多多4级",
+      "description": "宠物四级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 211,
+      "name": "亲密加加4级",
+      "description": "宠物四级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "level": 4,
+      "learned": true
+    },
+    {
+      "skill_id": 213,
+      "name": "积分多多5级",
+      "description": "宠物五级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 214,
+      "name": "亲密加加5级",
+      "description": "宠物五级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "level": 5,
+      "learned": true
+    },
+    {
+      "skill_id": 216,
+      "name": "积分多多6级",
+      "description": "宠物六级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 217,
+      "name": "亲密加加6级",
+      "description": "宠物六级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "level": 6,
+      "learned": true
+    },
+    {
+      "skill_id": 219,
+      "name": "积分多多7级",
+      "description": "宠物七级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 220,
+      "name": "亲密加加7级",
+      "description": "宠物七级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "level": 7,
+      "learned": true
+    },
+    {
+      "skill_id": 222,
+      "name": "积分多多8级",
+      "description": "宠物八级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 223,
+      "name": "亲密加加8级",
+      "description": "宠物八级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "level": 8,
+      "learned": true
+    },
+    {
+      "skill_id": 225,
+      "name": "积分多多9级",
+      "description": "宠物九级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 226,
+      "name": "亲密加加9级",
+      "description": "宠物九级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "level": 9,
+      "learned": true
+    },
+    {
+      "skill_id": 228,
+      "name": "积分多多10级",
+      "description": "宠物十级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    },
+    {
+      "skill_id": 229,
+      "name": "亲密加加10级",
+      "description": "宠物十级技能之一，增加所获得的亲密3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "level": 10,
+      "learned": true
+    }
+  ],
+  "skill_books": [
+    {
+      "item_id": 27001,
+      "resource_id": 1,
+      "name": "糖币加加1级",
+      "description": "宠物一级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 51,
+        "name": "糖币加加1级",
+        "description": "宠物一级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27002,
+      "resource_id": 2,
+      "name": "糖币加加2级",
+      "description": "宠物二级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 54,
+        "name": "糖币加加2级",
+        "description": "宠物二级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27003,
+      "resource_id": 3,
+      "name": "糖币加加3级",
+      "description": "宠物三级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 57,
+        "name": "糖币加加3级",
+        "description": "宠物三级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27004,
+      "resource_id": 4,
+      "name": "糖币加加4级",
+      "description": "宠物四级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 60,
+        "name": "糖币加加4级",
+        "description": "宠物四级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27005,
+      "resource_id": 5,
+      "name": "糖币加加5级",
+      "description": "宠物五级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 63,
+        "name": "糖币加加5级",
+        "description": "宠物五级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27006,
+      "resource_id": 6,
+      "name": "糖币加加6级",
+      "description": "宠物六级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 66,
+        "name": "糖币加加6级",
+        "description": "宠物六级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27007,
+      "resource_id": 7,
+      "name": "糖币加加7级",
+      "description": "宠物七级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 69,
+        "name": "糖币加加7级",
+        "description": "宠物七级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27008,
+      "resource_id": 8,
+      "name": "糖币加加8级",
+      "description": "宠物八级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 72,
+        "name": "糖币加加8级",
+        "description": "宠物八级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27009,
+      "resource_id": 9,
+      "name": "糖币加加9级",
+      "description": "宠物九级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 75,
+        "name": "糖币加加9级",
+        "description": "宠物九级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27010,
+      "resource_id": 10,
+      "name": "糖币加加10级",
+      "description": "宠物十级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 78,
+        "name": "糖币加加10级",
+        "description": "宠物十级技能之一，增加所获得的糖币6%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27011,
+      "resource_id": 11,
+      "name": "勇气加加1级",
+      "description": "宠物一级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 81,
+        "name": "勇气加加1级",
+        "description": "宠物一级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27012,
+      "resource_id": 12,
+      "name": "勇气加加2级",
+      "description": "宠物二级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 84,
+        "name": "勇气加加2级",
+        "description": "宠物二级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27013,
+      "resource_id": 13,
+      "name": "勇气加加3级",
+      "description": "宠物三级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 87,
+        "name": "勇气加加3级",
+        "description": "宠物三级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27014,
+      "resource_id": 14,
+      "name": "勇气加加4级",
+      "description": "宠物四级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 90,
+        "name": "勇气加加4级",
+        "description": "宠物四级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27015,
+      "resource_id": 15,
+      "name": "勇气加加5级",
+      "description": "宠物五级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 93,
+        "name": "勇气加加5级",
+        "description": "宠物五级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27016,
+      "resource_id": 16,
+      "name": "勇气加加6级",
+      "description": "宠物六级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 96,
+        "name": "勇气加加6级",
+        "description": "宠物六级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27017,
+      "resource_id": 17,
+      "name": "勇气加加7级",
+      "description": "宠物七级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 99,
+        "name": "勇气加加7级",
+        "description": "宠物七级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27018,
+      "resource_id": 18,
+      "name": "勇气加加8级",
+      "description": "宠物八级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 102,
+        "name": "勇气加加8级",
+        "description": "宠物八级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27019,
+      "resource_id": 19,
+      "name": "勇气加加9级",
+      "description": "宠物九级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 105,
+        "name": "勇气加加9级",
+        "description": "宠物九级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27020,
+      "resource_id": 20,
+      "name": "勇气加加10级",
+      "description": "宠物十级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 108,
+        "name": "勇气加加10级",
+        "description": "宠物十级技能之一，增加所获得的勇气3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27021,
+      "resource_id": 21,
+      "name": "积分加加1级",
+      "description": "宠物一级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 111,
+        "name": "积分加加1级",
+        "description": "宠物一级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27022,
+      "resource_id": 22,
+      "name": "积分加加2级",
+      "description": "宠物二级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 114,
+        "name": "积分加加2级",
+        "description": "宠物二级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27023,
+      "resource_id": 23,
+      "name": "积分加加3级",
+      "description": "宠物三级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 117,
+        "name": "积分加加3级",
+        "description": "宠物三级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27024,
+      "resource_id": 24,
+      "name": "积分加加4级",
+      "description": "宠物四级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 120,
+        "name": "积分加加4级",
+        "description": "宠物四级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27025,
+      "resource_id": 25,
+      "name": "积分加加5级",
+      "description": "宠物五级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 123,
+        "name": "积分加加5级",
+        "description": "宠物五级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27026,
+      "resource_id": 26,
+      "name": "积分加加6级",
+      "description": "宠物六级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 126,
+        "name": "积分加加6级",
+        "description": "宠物六级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27027,
+      "resource_id": 27,
+      "name": "积分加加7级",
+      "description": "宠物七级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 129,
+        "name": "积分加加7级",
+        "description": "宠物七级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27028,
+      "resource_id": 28,
+      "name": "积分加加8级",
+      "description": "宠物八级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 132,
+        "name": "积分加加8级",
+        "description": "宠物八级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27029,
+      "resource_id": 29,
+      "name": "积分加加9级",
+      "description": "宠物九级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 135,
+        "name": "积分加加9级",
+        "description": "宠物九级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27030,
+      "resource_id": 30,
+      "name": "积分加加10级",
+      "description": "宠物十级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 138,
+        "name": "积分加加10级",
+        "description": "宠物十级技能之一，增加所获得的积分3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27031,
+      "resource_id": 31,
+      "name": "声望加加1级",
+      "description": "宠物一级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 141,
+        "name": "声望加加1级",
+        "description": "宠物一级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27032,
+      "resource_id": 32,
+      "name": "声望加加2级",
+      "description": "宠物二级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 144,
+        "name": "声望加加2级",
+        "description": "宠物二级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27033,
+      "resource_id": 33,
+      "name": "声望加加3级",
+      "description": "宠物三级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 147,
+        "name": "声望加加3级",
+        "description": "宠物三级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27034,
+      "resource_id": 34,
+      "name": "声望加加4级",
+      "description": "宠物四级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 150,
+        "name": "声望加加4级",
+        "description": "宠物四级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27035,
+      "resource_id": 35,
+      "name": "声望加加5级",
+      "description": "宠物五级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 153,
+        "name": "声望加加5级",
+        "description": "宠物五级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27036,
+      "resource_id": 36,
+      "name": "声望加加6级",
+      "description": "宠物六级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 156,
+        "name": "声望加加6级",
+        "description": "宠物六级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27037,
+      "resource_id": 37,
+      "name": "声望加加7级",
+      "description": "宠物七级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 159,
+        "name": "声望加加7级",
+        "description": "宠物七级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27038,
+      "resource_id": 38,
+      "name": "声望加加8级",
+      "description": "宠物八级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 162,
+        "name": "声望加加8级",
+        "description": "宠物八级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27039,
+      "resource_id": 39,
+      "name": "声望加加9级",
+      "description": "宠物九级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 165,
+        "name": "声望加加9级",
+        "description": "宠物九级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27040,
+      "resource_id": 40,
+      "name": "声望加加10级",
+      "description": "宠物十级技能之一，增加购买道具和比赛时所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 168,
+        "name": "声望加加10级",
+        "description": "宠物十级技能之一，增加所获得的声望3%，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27041,
+      "resource_id": 41,
+      "name": "材料多多1级",
+      "description": "宠物一级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 171,
+        "name": "材料多多1级",
+        "description": "宠物一级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27042,
+      "resource_id": 42,
+      "name": "材料多多2级",
+      "description": "宠物二级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 174,
+        "name": "材料多多2级",
+        "description": "宠物二级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27043,
+      "resource_id": 43,
+      "name": "材料多多3级",
+      "description": "宠物三级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 177,
+        "name": "材料多多3级",
+        "description": "宠物三级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27044,
+      "resource_id": 44,
+      "name": "材料多多4级",
+      "description": "宠物四级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 180,
+        "name": "材料多多4级",
+        "description": "宠物四级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27045,
+      "resource_id": 45,
+      "name": "材料多多5级",
+      "description": "宠物五级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 183,
+        "name": "材料多多5级",
+        "description": "宠物五级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27046,
+      "resource_id": 46,
+      "name": "材料多多6级",
+      "description": "宠物六级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 186,
+        "name": "材料多多6级",
+        "description": "宠物六级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27047,
+      "resource_id": 47,
+      "name": "材料多多7级",
+      "description": "宠物七级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 189,
+        "name": "材料多多7级",
+        "description": "宠物七级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27048,
+      "resource_id": 48,
+      "name": "材料多多8级",
+      "description": "宠物八级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 192,
+        "name": "材料多多8级",
+        "description": "宠物八级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27049,
+      "resource_id": 49,
+      "name": "材料多多9级",
+      "description": "宠物九级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 195,
+        "name": "材料多多9级",
+        "description": "宠物九级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27050,
+      "resource_id": 50,
+      "name": "材料多多10级",
+      "description": "宠物十级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 198,
+        "name": "材料多多10级",
+        "description": "宠物十级技能之一，有3%的概率使获得的材料翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27051,
+      "resource_id": 51,
+      "name": "积分多多1级",
+      "description": "宠物一级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 201,
+        "name": "积分多多1级",
+        "description": "宠物一级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27052,
+      "resource_id": 52,
+      "name": "积分多多2级",
+      "description": "宠物二级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 204,
+        "name": "积分多多2级",
+        "description": "宠物二级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27053,
+      "resource_id": 53,
+      "name": "积分多多3级",
+      "description": "宠物三级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 207,
+        "name": "积分多多3级",
+        "description": "宠物三级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27054,
+      "resource_id": 54,
+      "name": "积分多多4级",
+      "description": "宠物四级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 210,
+        "name": "积分多多4级",
+        "description": "宠物四级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27055,
+      "resource_id": 55,
+      "name": "积分多多5级",
+      "description": "宠物五级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 213,
+        "name": "积分多多5级",
+        "description": "宠物五级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27056,
+      "resource_id": 56,
+      "name": "积分多多6级",
+      "description": "宠物六级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 216,
+        "name": "积分多多6级",
+        "description": "宠物六级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27057,
+      "resource_id": 57,
+      "name": "积分多多7级",
+      "description": "宠物七级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 219,
+        "name": "积分多多7级",
+        "description": "宠物七级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27058,
+      "resource_id": 58,
+      "name": "积分多多8级",
+      "description": "宠物八级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 222,
+        "name": "积分多多8级",
+        "description": "宠物八级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27059,
+      "resource_id": 59,
+      "name": "积分多多9级",
+      "description": "宠物九级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 225,
+        "name": "积分多多9级",
+        "description": "宠物九级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27060,
+      "resource_id": 60,
+      "name": "积分多多10级",
+      "description": "宠物十级技能之一，有3%的概率使得获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 228,
+        "name": "积分多多10级",
+        "description": "宠物十级技能之一，有3%的概率使获得的积分翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27061,
+      "resource_id": 61,
+      "name": "勇气多多1级",
+      "description": "宠物一级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 82,
+        "name": "勇气多多1级",
+        "description": "宠物一级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27062,
+      "resource_id": 62,
+      "name": "勇气多多2级",
+      "description": "宠物二级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 85,
+        "name": "勇气多多2级",
+        "description": "宠物二级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27063,
+      "resource_id": 63,
+      "name": "勇气多多3级",
+      "description": "宠物三级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 88,
+        "name": "勇气多多3级",
+        "description": "宠物三级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27064,
+      "resource_id": 64,
+      "name": "勇气多多4级",
+      "description": "宠物四级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 91,
+        "name": "勇气多多4级",
+        "description": "宠物四级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27065,
+      "resource_id": 65,
+      "name": "勇气多多5级",
+      "description": "宠物五级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 94,
+        "name": "勇气多多5级",
+        "description": "宠物五级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27066,
+      "resource_id": 66,
+      "name": "勇气多多6级",
+      "description": "宠物六级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 97,
+        "name": "勇气多多6级",
+        "description": "宠物六级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27067,
+      "resource_id": 67,
+      "name": "勇气多多7级",
+      "description": "宠物七级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 100,
+        "name": "勇气多多7级",
+        "description": "宠物七级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27068,
+      "resource_id": 68,
+      "name": "勇气多多8级",
+      "description": "宠物八级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 103,
+        "name": "勇气多多8级",
+        "description": "宠物八级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27069,
+      "resource_id": 69,
+      "name": "勇气多多9级",
+      "description": "宠物九级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 106,
+        "name": "勇气多多9级",
+        "description": "宠物九级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27070,
+      "resource_id": 70,
+      "name": "勇气多多10级",
+      "description": "宠物十级技能之一，有3%的概率使得获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 109,
+        "name": "勇气多多10级",
+        "description": "宠物十级技能之一，有3%的概率使获得的勇气翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27071,
+      "resource_id": 71,
+      "name": "亲密多多1级",
+      "description": "宠物一级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+      "skill": {
+        "skill_id": 112,
+        "name": "亲密多多1级",
+        "description": "宠物一级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他一级技能。",
+        "level": 1,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27072,
+      "resource_id": 72,
+      "name": "亲密多多2级",
+      "description": "宠物二级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+      "skill": {
+        "skill_id": 115,
+        "name": "亲密多多2级",
+        "description": "宠物二级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他二级技能。",
+        "level": 2,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27073,
+      "resource_id": 73,
+      "name": "亲密多多3级",
+      "description": "宠物三级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+      "skill": {
+        "skill_id": 118,
+        "name": "亲密多多3级",
+        "description": "宠物三级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他三级技能。",
+        "level": 3,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27074,
+      "resource_id": 74,
+      "name": "亲密多多4级",
+      "description": "宠物四级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+      "skill": {
+        "skill_id": 121,
+        "name": "亲密多多4级",
+        "description": "宠物四级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他四级技能。",
+        "level": 4,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27075,
+      "resource_id": 75,
+      "name": "亲密多多5级",
+      "description": "宠物五级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+      "skill": {
+        "skill_id": 124,
+        "name": "亲密多多5级",
+        "description": "宠物五级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他五级技能。",
+        "level": 5,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27076,
+      "resource_id": 76,
+      "name": "亲密多多6级",
+      "description": "宠物六级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+      "skill": {
+        "skill_id": 127,
+        "name": "亲密多多6级",
+        "description": "宠物六级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他六级技能。",
+        "level": 6,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27077,
+      "resource_id": 77,
+      "name": "亲密多多7级",
+      "description": "宠物七级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+      "skill": {
+        "skill_id": 130,
+        "name": "亲密多多7级",
+        "description": "宠物七级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他七级技能。",
+        "level": 7,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27078,
+      "resource_id": 78,
+      "name": "亲密多多8级",
+      "description": "宠物八级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+      "skill": {
+        "skill_id": 133,
+        "name": "亲密多多8级",
+        "description": "宠物八级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他八级技能。",
+        "level": 8,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27079,
+      "resource_id": 79,
+      "name": "亲密多多9级",
+      "description": "宠物九级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+      "skill": {
+        "skill_id": 136,
+        "name": "亲密多多9级",
+        "description": "宠物九级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他九级技能。",
+        "level": 9,
+        "learned": true
+      }
+    },
+    {
+      "item_id": 27080,
+      "resource_id": 80,
+      "name": "亲密多多10级",
+      "description": "宠物十级技能之一，有3%的概率使得获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+      "skill": {
+        "skill_id": 139,
+        "name": "亲密多多10级",
+        "description": "宠物十级技能之一，有3%的概率使获得的亲密翻倍，同类型技能效果叠加，学习此技能以后不能学习其他十级技能。",
+        "level": 10,
+        "learned": true
+      }
+    }
+  ],
+  "foods": [
+    {
+      "item_id": 26001,
+      "resource_id": 1,
+      "name": "宠物体力药水",
+      "description": "增加宠物体力100点。",
+      "effect": {
+        "experience": 0,
+        "loyalty": 100,
+        "mood": 0
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26002,
+      "resource_id": 2,
+      "name": "宠物粮食小",
+      "description": "增加宠物体力400点，增加宠物成长值20点。",
+      "effect": {
+        "experience": 20,
+        "loyalty": 400,
+        "mood": 0
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26003,
+      "resource_id": 3,
+      "name": "宠物粮食中",
+      "description": "增加宠物体力600点，增加宠物成长值30点。",
+      "effect": {
+        "experience": 30,
+        "loyalty": 600,
+        "mood": 0
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26004,
+      "resource_id": 4,
+      "name": "宠物粮食大",
+      "description": "增加宠物体力。",
+      "effect": {
+        "experience": 60,
+        "loyalty": 1000,
+        "mood": 0
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26005,
+      "resource_id": 5,
+      "name": "心情棒棒糖小",
+      "description": "增加宠物心情1点，保持宠物心情好可以使宠物成长加快哦！",
+      "effect": {
+        "experience": 0,
+        "loyalty": 0,
+        "mood": 1
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26006,
+      "resource_id": 6,
+      "name": "心情棒棒糖中",
+      "description": "增加宠物心情20点，保持宠物心情好可以使宠物成长加快哦！",
+      "effect": {
+        "experience": 0,
+        "loyalty": 0,
+        "mood": 20
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26007,
+      "resource_id": 7,
+      "name": "心情棒棒糖大",
+      "description": "增加宠物心情，保持宠物心情好可以使宠物成长加快哦！",
+      "effect": {
+        "experience": 0,
+        "loyalty": 0,
+        "mood": 50
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26008,
+      "resource_id": 8,
+      "name": "花生仁巧克力",
+      "description": "增加宠物成长值90点。",
+      "effect": {
+        "experience": 90,
+        "loyalty": 0,
+        "mood": 0
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26009,
+      "resource_id": 9,
+      "name": "松子仁巧克力",
+      "description": "增加宠物成长值180点。",
+      "effect": {
+        "experience": 180,
+        "loyalty": 0,
+        "mood": 0
+      },
+      "complete": true
+    },
+    {
+      "item_id": 26010,
+      "resource_id": 10,
+      "name": "榛子仁巧克力",
+      "description": "增加宠物成长值450点。",
+      "effect": {
+        "experience": 450,
+        "loyalty": 0,
+        "mood": 0
+      },
+      "complete": true
+    }
+  ],
+  "unmapped_models": []
+}

@@ -1,0 +1,5 @@
+dist/
+.cowork-temp/
+*.log
+runtime/
+build-assets/
