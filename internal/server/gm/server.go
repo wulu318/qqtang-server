@@ -282,15 +282,6 @@ func New(store *persistence.PlayerStore, items []itemcatalog.Entry, equipmentCat
 
 func (server *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/assets/", server.serveRegisterAsset)
-	mux.HandleFunc("/leaderboard", server.handleLeaderboardPage)
-	mux.HandleFunc("/register", func(writer http.ResponseWriter, request *http.Request) {
-		if request.Method == http.MethodGet {
-			server.handleRegisterPage(writer, request)
-			return
-		}
-		server.handleRegister(writer, request)
-	})
 	mux.HandleFunc("/gm/api/health", server.handleHealth)
 	mux.HandleFunc("/gm/api/progression", server.handleProgression)
 	mux.HandleFunc("/gm/api/leaderboard", server.handleLeaderboard)
@@ -305,6 +296,23 @@ func (server *Server) Handler() http.Handler {
 		http.Redirect(writer, request, "/gm/", http.StatusTemporaryRedirect)
 	})
 	return server.authentication(server.securityHeaders(mux))
+}
+
+// PublicHandler serves only the player portal (registration, assets,
+// leaderboard). The game's directory listener mounts this on the public port;
+// the GM listener never exposes these routes.
+func (server *Server) PublicHandler() http.Handler {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/assets/", server.serveRegisterAsset)
+	mux.HandleFunc("/leaderboard", server.handleLeaderboardPage)
+	mux.HandleFunc("/register", func(writer http.ResponseWriter, request *http.Request) {
+		if request.Method == http.MethodGet {
+			server.handleRegisterPage(writer, request)
+			return
+		}
+		server.handleRegister(writer, request)
+	})
+	return server.securityHeaders(mux)
 }
 
 func (server *Server) handleProgression(writer http.ResponseWriter, request *http.Request) {

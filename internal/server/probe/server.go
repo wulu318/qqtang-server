@@ -100,6 +100,7 @@ type Server struct {
 	virtualRoomPeerSeq          map[uint32]uint32
 	virtualRoomPeerSendMu       map[uint32]*sync.Mutex
 	gmHandler                   http.Handler
+	portalHandler               http.Handler
 	gmHTTPServer                *http.Server
 	directoryHallPayload        []byte
 	gameSectionID               uint16
@@ -534,6 +535,7 @@ func New(config Config) (*Server, error) {
 			server.log(logEvent{Level: "warn", Event: "gm_item_image_alias_skipped", ErrorContext: warning})
 		}
 		server.gmHandler = gm.Handler()
+		server.portalHandler = gm.PublicHandler()
 	}
 	if config.LogFile != "" {
 		if err := os.MkdirAll(filepath.Dir(config.LogFile), 0o755); err != nil {

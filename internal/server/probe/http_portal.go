@@ -13,7 +13,7 @@ import (
 // the one public port operators actually open; anything else is returned as a
 // buffered connection for the native QQTang protocol.
 func (server *Server) tryServeHTTPPortal(connection net.Conn) (net.Conn, bool) {
-	if server.gmHandler == nil {
+	if server.portalHandler == nil {
 		return connection, false
 	}
 	reader := bufio.NewReaderSize(connection, 4096)
@@ -29,7 +29,7 @@ func (server *Server) tryServeHTTPPortal(connection net.Conn) (net.Conn, bool) {
 	var once sync.Once
 	closeDone := func() { once.Do(func() { close(done) }) }
 	wrapped := &bufferedConn{Conn: connection, reader: reader, onClose: closeDone}
-	http.Serve(&singleConnListener{conn: wrapped, done: done, closeDone: closeDone}, server.gmHandler)
+	http.Serve(&singleConnListener{conn: wrapped, done: done, closeDone: closeDone}, server.portalHandler)
 	return nil, true
 }
 
