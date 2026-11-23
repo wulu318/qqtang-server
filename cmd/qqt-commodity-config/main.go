@@ -14,7 +14,13 @@ func main() {
 	clientRoot := flag.String("client-root", filepath.Join("runtime", "client-patched"), "QQTang client root")
 	output := flag.String("out", "", "output Commodity.ini (defaults to <client-root>/config/Commodity.ini)")
 	maximum := flag.Int("max-commodities", shopcatalog.DefaultCommodityLimit, "maximum storefront rows; zero keeps the complete registry")
+	prices := flag.String("prices", filepath.Join("configs", "shop-prices.json"), "optional shop price table")
 	flag.Parse()
+	if table, err := shopcatalog.LoadPriceTable(*prices); err != nil {
+		fatal(err)
+	} else {
+		shopcatalog.SetPriceTable(table)
+	}
 	if *output == "" {
 		*output = filepath.Join(*clientRoot, "config", "Commodity.ini")
 	}

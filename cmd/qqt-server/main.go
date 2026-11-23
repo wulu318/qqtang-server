@@ -14,6 +14,7 @@ import (
 	"syscall"
 
 	"qqtang/internal/processcontrol"
+	"qqtang/internal/game/shopcatalog"
 	gmserver "qqtang/internal/server/gm"
 	"qqtang/internal/server/networksetup"
 	"qqtang/internal/server/probe"
@@ -22,9 +23,15 @@ import (
 func main() {
 	configPath := flag.String("config", "configs/server.json", "server configuration")
 	portsPath := flag.String("ports", "configs/ports.json", "optional listener port overrides")
+	pricesPath := flag.String("prices", "configs/shop-prices.json", "optional shop price table")
 	gmUsername := flag.String("gm-username", "", "GM username to save before startup (requires -gm-password-stdin)")
 	gmPasswordStdin := flag.Bool("gm-password-stdin", false, "read the GM password from stdin and save its salted verifier")
 	flag.Parse()
+	if prices, priceErr := shopcatalog.LoadPriceTable(*pricesPath); priceErr != nil {
+		fatal(priceErr)
+	} else {
+		shopcatalog.SetPriceTable(prices)
+	}
 	if err := saveRequestedGMCredentials(*configPath, *gmUsername, *gmPasswordStdin, os.Stdin); err != nil {
 		fatal(err)
 	}

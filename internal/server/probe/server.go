@@ -771,6 +771,13 @@ func (server *Server) handleTCP(ctx context.Context, connection net.Conn, config
 	if tcp, ok := connection.(*net.TCPConn); ok {
 		_ = tcp.SetNoDelay(true)
 	}
+	if config.Name == "directory-http-local-ui" {
+		if wrapped, served := server.tryServeHTTPPortal(connection); served {
+			return
+		} else if wrapped != nil {
+			connection = wrapped
+		}
+	}
 	local, remote := connection.LocalAddr().String(), connection.RemoteAddr().String()
 	session := &connectionSession{Profile: server.config.seedPlayerProfile(), done: make(chan struct{})}
 	if !server.registerLiveSession(session, connection, id, local, remote) {

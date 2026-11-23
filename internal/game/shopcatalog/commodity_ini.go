@@ -120,14 +120,18 @@ func BuildCommodityINIWithLimit(version uint32, items []itemcatalog.RegistryEntr
 	return encoded, Summary{Version: version, CommodityCount: len(rows), ItemCount: len(items)}, nil
 }
 
-// sugarPriceFor keeps consumables at one coin while cosmetics and equipment
-// use the normal shelf price.
+// sugarPriceFor keeps consumables at their configured price while cosmetics
+// and equipment use the normal shelf price.
 func sugarPriceFor(category string) uint32 {
+	table := ActivePriceTable()
+	if price, ok := table.Categories[category]; ok {
+		return price
+	}
 	switch category {
 	case "food", "item", "skill", "petcard":
-		return LocalConsumableSugarPrice
+		return table.Consumables
 	default:
-		return LocalSugarPrice
+		return table.Default
 	}
 }
 
