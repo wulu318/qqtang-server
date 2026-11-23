@@ -13,12 +13,12 @@ func jsonEncode(writer http.ResponseWriter, value any) error {
 var registerPage = template.Must(template.New("register").Parse(`<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>伍陆QQ堂 · 注册</title>
+<title>伍陆糖果屋 · 注册</title>
 <link rel="stylesheet" href="/assets/register.css">
 </head><body>
 <canvas id="bubbles"></canvas>
 <main class="card">
-  <div class="brand"><span class="pixel">伍陆</span><span class="qq">QQ堂</span></div>
+  <div class="brand"><span class="pixel">伍陆</span><span class="qq">糖果屋</span></div>
   <p class="hint">5-10 位数字账号 · 6-16 位字母数字密码</p>
   <form method="post" action="/register" autocomplete="off">
     <label>账号</label>
@@ -42,7 +42,7 @@ var registerPage = template.Must(template.New("register").Parse(`<!doctype html>
 var leaderboardPage = template.Must(template.New("leaderboard").Funcs(template.FuncMap{"inc": func(i int) int { return i + 1 }}).Parse(`<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>伍陆QQ堂 · 排行榜</title>
+<title>伍陆糖果屋 · 排行榜</title>
 <style>
 body{font-family:system-ui,sans-serif;background:#141a24;color:#eaf2fb;display:flex;justify-content:center;padding:4vh 12px}
 .card{width:640px;background:#1c2634;border-radius:14px;padding:20px;box-shadow:0 18px 50px #0007}
@@ -52,7 +52,7 @@ th,td{padding:8px 6px;text-align:left;border-bottom:1px solid #2c3a4d}
 th{color:#9fb0c3}td.num{text-align:right}
 .empty{color:#9fb0c3;font-size:13px}
 </style></head><body><div class="card">
-<h1>伍陆QQ堂 · 排行榜</h1>
+<h1>伍陆糖果屋 · 排行榜</h1>
 {{if .}}<table><thead><tr><th>#</th><th>昵称</th><th class="num">等级</th><th class="num">糖币</th><th class="num">胜场</th><th class="num">积分</th></tr></thead><tbody>
 {{range $i, $e := .}}<tr><td>{{inc $i}}</td><td>{{$e.Nickname}}</td><td class="num">{{$e.Level}}</td><td class="num">{{$e.Money}}</td><td class="num">{{$e.Wins}}</td><td class="num">{{$e.Points}}</td></tr>{{end}}
 </tbody></table>{{else}}<div class="empty">还没有数据</div>{{end}}
