@@ -30,9 +30,13 @@ type response struct {
 // remoteConfig is the published bootstrap document. Only server_ip is
 // required; mode and client_server_ip default to the local settings.
 type remoteConfig struct {
-	ServerIP       string `json:"server_ip"`
-	ClientServerIP string `json:"client_server_ip"`
-	Mode           string `json:"mode"`
+	ServerIP       string              `json:"server_ip"`
+	ClientServerIP string              `json:"client_server_ip"`
+	Mode           string              `json:"mode"`
+	Version        string              `json:"version"`
+	PackageURL     string              `json:"package_url"`
+	SHA256         string              `json:"sha256"`
+	Ports          *networksetup.Ports `json:"ports"`
 }
 
 func configCachePath(root string) string {
@@ -145,7 +149,7 @@ func main() {
 
 	// Published bootstrap: the operator changes one JSON file behind a stable
 	// URL, so moving the game server never requires redistributing launchers.
-	if *configURL != "" && (*action == "start-server" || *action == "start-client" || *action == "resolve-config") {
+	if *configURL != "" && (*action == "start-server" || *action == "start-client" || *action == "resolve-config" || *action == "update") {
 		remote, remoteErr := fetchRemoteConfig(*root, *configURL, 4*time.Second)
 		if remoteErr != nil {
 			manager.RecordDiagnostic("远程配置获取失败，使用本地缓存：%v", remoteErr)
@@ -161,6 +165,11 @@ func main() {
 		if remote.Mode != "" {
 			*mode = remote.Mode
 		}
+		if remote.Ports != nil {
+			if saveErr := networksetup.SavePorts(filepath.Join(*root, "configs", "ports.json"), *remote.Ports); saveErr != nil {
+				manager.RecordDiagnostic("写入端口配置失败：%v", saveErr)
+			}
+		}
 	}
 
 	var status launcherapp.Status
@@ -171,6 +180,17 @@ func main() {
 	case "resolve-config":
 		status = manager.Status()
 		message = "server_ip=" + *serverIP
+	case "update":
+		status = manager.Status()
+		updated, updateMessage, updateErr := runUpdate(*root, *configURL)
+		if updateErr != nil {
+			err = updateErr
+			break
+		}
+		message = updateMessage
+		if updated {
+			message += "；请重新启动启动器"
+		}
 	case "start-server":
 		settings, loadErr := manager.LoadSettings()
 		if loadErr != nil {
