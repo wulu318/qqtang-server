@@ -1,6 +1,6 @@
 # QQ堂本地怀旧版开发说明
 
-本仓库包含本地服务端、启动器、协议与游戏规则实现、静态客户端兼容补丁以及发行包构建脚本。原始 QQ堂客户端不进入仓库；普通玩家应直接从 GitHub Releases 下载 `QQTang-Local.zip`。
+本仓库包含本地服务端、启动器、协议与游戏规则实现、静态客户端兼容补丁以及发行包构建脚本。原始 QQ堂客户端不进入仓库；普通玩家应直接从 [GitHub Releases](https://github.com/wulu318/qqtang-server/releases) 下载 `QQTang-Local.zip`。
 
 本项目源码采用 [Apache License 2.0](LICENSE)。原始客户端不在该许可范围内；随仓库提供的第三方组件继续遵循各自许可，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 

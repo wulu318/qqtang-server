@@ -54,6 +54,8 @@ type Server struct {
 	credentials      *Credentials
 	accountOnline    func(uint32) bool
 	authCache        sync.Map
+	registerMu       sync.Mutex
+	registerWindows  map[string]registerWindowEntry
 }
 
 // ItemImageWarnings reports optional GM-preview resources which were skipped.
@@ -269,6 +271,13 @@ func New(store *persistence.PlayerStore, items []itemcatalog.Entry, equipmentCat
 
 func (server *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/register", func(writer http.ResponseWriter, request *http.Request) {
+		if request.Method == http.MethodGet {
+			server.handleRegisterPage(writer, request)
+			return
+		}
+		server.handleRegister(writer, request)
+	})
 	mux.HandleFunc("/gm/api/health", server.handleHealth)
 	mux.HandleFunc("/gm/api/progression", server.handleProgression)
 	mux.HandleFunc("/gm/api/accounts", server.handleAccounts)
@@ -304,6 +313,10 @@ func (server *Server) authentication(next http.Handler) http.Handler {
 		return next
 	}
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if strings.HasPrefix(request.URL.Path, "/register") {
+			next.ServeHTTP(writer, request)
+			return
+		}
 		authorization := request.Header.Get("Authorization")
 		authorizationKey := sha256.Sum256([]byte(authorization))
 		if cached, ok := server.authCache.Load(authorizationKey); ok && time.Now().Before(cached.(authCacheEntry).expires) {

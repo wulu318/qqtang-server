@@ -1,6 +1,6 @@
 # QQ堂怀旧版使用说明
 
-> **本项目永久免费，请勿付费购买。** 公开获取地址：<https://github.com/kuuhaku1314/qqtang>
+> **本项目永久免费，请勿付费购买。** 公开获取地址：<https://github.com/wulu318/qqtang-server>
 
 ## 普通玩家
 
