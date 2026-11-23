@@ -280,6 +280,7 @@ func (server *Server) Handler() http.Handler {
 	})
 	mux.HandleFunc("/gm/api/health", server.handleHealth)
 	mux.HandleFunc("/gm/api/progression", server.handleProgression)
+	mux.HandleFunc("/gm/api/leaderboard", server.handleLeaderboard)
 	mux.HandleFunc("/gm/api/accounts", server.handleAccounts)
 	mux.HandleFunc("/gm/api/accounts/", server.handleAccount)
 	mux.HandleFunc("/gm/api/items", server.handleItems)

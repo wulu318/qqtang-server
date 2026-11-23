@@ -22,6 +22,11 @@ import (
 	"qqtang/internal/server/persistence"
 )
 
+// competitiveMatchMoneyBonus is the flat sugar-coin payout for every finished
+// competitive match, independent of pickups. The shop is priced at one coin,
+// so this keeps normal play self-sustaining.
+const competitiveMatchMoneyBonus uint32 = 300
+
 // ProfileRepository owns durable account projections only.
 type ProfileRepository interface {
 	LoadOrCreate(context.Context, uint32, game.PlayerProfile) (game.PlayerProfile, error)
@@ -599,6 +604,9 @@ func ProjectCompetitiveSettlement(profile game.PlayerProfile, settlement Competi
 	// after separately validating its reward event/configuration; ordinary
 	// competitive settlement leaves this zero.
 	updated.GameInfo, _ = game.ApplyGameMoneyReward(updated.GameInfo, settlement.MoneyReward)
+	// Every finished competitive match pays a flat participation bonus so a
+	// normal player can afford the one-coin shop without grinding pickups.
+	updated.GameInfo, _ = game.ApplyGameMoneyReward(updated.GameInfo, competitiveMatchMoneyBonus)
 	if err := addCollectedInventoryItems(&updated, settlement.CollectedItems); err != nil {
 		return game.PlayerProfile{}, game.ProgressionChange{}, fmt.Errorf("apply competitive collected items: %w", err)
 	}

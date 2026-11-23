@@ -31,7 +31,7 @@ func TestBuildCommodityINIUsesCanonicalItemIDAndPackedType(t *testing.T) {
 	}
 	for _, want := range []string{
 		"version = 848", "COMMODITYCOUNT = 1", "[COMMODITY.1]", "COMMODITYID = 912067",
-		"COMMODITYNAME = 中山装[30天]", "COMMODITYTYPE = 1028", "QPRICE = 10", "QQPOINTPRICE = 10", "QQTANGPRICE = 1000",
+		"COMMODITYNAME = 中山装[30天]", "COMMODITYTYPE = 1028", "QPRICE = 10", "QQPOINTPRICE = 10", "QQTANGPRICE = 1",
 		"ITEM.1.ID = 2067", "ITEM.1.NUM = 1", "ITEM.1.AVAILPERIOD = 0",
 		"[comment]", "count = 4", "[comment.1]", "item.1 = 912067",
 	} {
@@ -92,7 +92,7 @@ func TestCatalogMatchesPublishedCommodityRows(t *testing.T) {
 		t.Fatal(err)
 	}
 	product, ok := catalog.Lookup(912067)
-	if !ok || product.ItemID != 2067 || product.Type != 0x0404 || product.SugarPrice != 1000 || catalog.Version() != 848 {
+	if !ok || product.ItemID != 2067 || product.Type != 0x0404 || product.SugarPrice != 1 || catalog.Version() != 848 {
 		t.Fatalf("product/catalog = %+v, found=%v, version=%d", product, ok, catalog.Version())
 	}
 	if len(catalog.Products()) != 2 {

@@ -143,7 +143,7 @@ func TestPlayerServiceRunsAssetLifecycleWithoutClient(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if purchased.Status != PurchaseSuccess || purchased.BalanceLeft != 4000 || len(purchased.Profile.Inventory) != 1 {
+	if purchased.Status != PurchaseSuccess || purchased.BalanceLeft != 4999 || len(purchased.Profile.Inventory) != 1 {
 		t.Fatalf("unexpected sugar purchase result: %+v", purchased)
 	}
 	profile, err = service.UpdateItemStatuses(ctx, 1000001, purchased.Profile.GameInfo.RoleID, purchased.Profile,
@@ -305,8 +305,8 @@ func TestPlayerServiceStatusUpdateDoesNotOverwriteANewerShopPurchase(t *testing.
 	if err != nil {
 		t.Fatal(err)
 	}
-	if loaded.GameInfo.Money != 4000 {
-		t.Fatalf("money = %d, want 4000", loaded.GameInfo.Money)
+	if loaded.GameInfo.Money != 4999 {
+		t.Fatalf("money = %d, want 4999", loaded.GameInfo.Money)
 	}
 	if index := inventoryIndex(loaded.Inventory, 20043); index < 0 || loaded.Inventory[index].NumOfItem != 1 {
 		t.Fatalf("newer shop purchase was overwritten: %+v", loaded.Inventory)
