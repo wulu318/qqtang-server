@@ -198,7 +198,7 @@ func TestShopPurchaseRefreshesSessionAndCanBeEquipped(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if response.ResultID != game.ShopBuyResultSuccess || outcome != "success_item_2067_money_2500" || response.TicketLeft != 2500 {
+	if response.ResultID != game.ShopBuyResultSuccess || outcome != "success_item_2067_money_3400" || response.TicketLeft != 3400 {
 		t.Fatalf("response/outcome = %+v / %s", response, outcome)
 	}
 	if len(session.Profile.Inventory) != 1 || session.Profile.Inventory[0].ItemID != 2067 {
@@ -213,7 +213,7 @@ func TestShopPurchaseRefreshesSessionAndCanBeEquipped(t *testing.T) {
 		UIN: uin, CommodityID: 912068, DealType: game.ShopDealTypePurchase,
 		PayType: game.ShopPayTypeGameMoney, AgreeMixedPayment: 1,
 	})
-	if err != nil || response.ResultID != game.ShopBuyResultSuccess || response.TicketLeft != 1500 {
+	if err != nil || response.ResultID != game.ShopBuyResultSuccess || response.TicketLeft != 3300 {
 		t.Fatalf("second purchase = %+v / %v", response, err)
 	}
 	if err := server.updateSessionItemStatuses(session, game.ItemStatusChangeRequest{
