@@ -53,6 +53,7 @@ type Server struct {
 	imageCache       sync.Map
 	credentials      *Credentials
 	accountOnline    func(uint32) bool
+	inventoryPush    func(uint32, game.ItemInfo)
 	authCache        sync.Map
 	registerMu       sync.Mutex
 	registerWindows  map[string]registerWindowEntry
@@ -88,6 +89,15 @@ func WithCredentials(credentials *Credentials) Option {
 // WithAccountOnlineCheck installs the authoritative runtime-presence check
 // used by destructive account operations. The GM package does not import the
 // game server, so the probe layer supplies this read-only boundary.
+// WithInventoryPush lets GM grants reach an online player immediately instead
+// of waiting for the next login.
+func WithInventoryPush(push func(uint32, game.ItemInfo)) Option {
+	return func(server *Server) error {
+		server.inventoryPush = push
+		return nil
+	}
+}
+
 func WithAccountOnlineCheck(check func(uint32) bool) Option {
 	return func(server *Server) error {
 		if check == nil {
@@ -728,6 +738,9 @@ func (server *Server) handleInventoryItem(writer http.ResponseWriter, request *h
 		if err := server.players.SetInventoryItem(request.Context(), uin, item); err != nil {
 			writeStoreError(writer, err)
 			return
+		}
+		if server.inventoryPush != nil {
+			server.inventoryPush(uin, item)
 		}
 		server.writeAccount(writer, request.Context(), http.StatusOK, uin)
 	case http.MethodDelete:

@@ -512,7 +512,10 @@ func New(config Config) (*Server, error) {
 	if config.GMHTTPAddress != "" {
 		gm, gmErr := gmserver.New(playerStore, itemEntries, equipmentCatalog, config.ClientRoot, config.playerProfileForUIN,
 			gmserver.WithCredentials(config.GMCredentials), gmserver.WithItemImageAliases(config.ItemImageAliasesPath),
-			gmserver.WithAccountOnlineCheck(server.accountOnlineForGM), gmserver.WithPlayerService(playerService))
+			gmserver.WithAccountOnlineCheck(server.accountOnlineForGM), gmserver.WithPlayerService(playerService),
+			gmserver.WithInventoryPush(func(uin uint32, item game.ItemInfo) {
+				server.sendPrimaryInventoryItemRefresh(uin, 0, item)
+			}))
 		if gmErr != nil {
 			captureWriter.Close()
 			if playerStore != nil {
