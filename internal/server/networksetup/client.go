@@ -40,7 +40,16 @@ func ApplyClientTargetWithPorts(clientRoot, serverIP string, ports Ports) error 
 	if err := ApplyClientTarget(clientRoot, serverIP); err != nil {
 		return err
 	}
-	return applyClientPorts(clientRoot, ports.withDefaults())
+	if err := applyClientPorts(clientRoot, ports.withDefaults()); err != nil {
+		return err
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	address, err := resolveEndpointIPv4(ctx, serverIP, false, net.DefaultResolver.LookupNetIP)
+	if err != nil {
+		return err
+	}
+	return patchClientWebURLs(clientRoot, address.String(), ports.withDefaults().Directory)
 }
 
 func applyClientPorts(clientRoot string, ports Ports) error {
