@@ -109,7 +109,7 @@ func BuildCommodityINIWithLimit(version uint32, items []itemcatalog.RegistryEntr
 		fmt.Fprintf(&utf8, "COMMODITYID = %d\r", row.Commodity.CommodityID)
 		fmt.Fprintf(&utf8, "COMMODITYNAME = %s\r", sanitizeINIValue(row.Commodity.Name))
 		fmt.Fprintf(&utf8, "COMMODITYTYPE = %d\r", row.Type)
-		fmt.Fprintf(&utf8, "ITEMCOUNT = 1\rQPRICE = %d\rQQPOINTPRICE = %d\rQQTANGPRICE = %d\rRESTORPRICE = 0\rSALEDATELIMIT = 0\rMEMBERREBATE = 100\rATTRIBUTE = 0\rREBATE = 100\r", LocalQPrice, LocalQQPointPrice, LocalSugarPrice)
+		fmt.Fprintf(&utf8, "ITEMCOUNT = 1\rQPRICE = %d\rQQPOINTPRICE = %d\rQQTANGPRICE = %d\rRESTORPRICE = 0\rSALEDATELIMIT = 0\rMEMBERREBATE = 100\rATTRIBUTE = 0\rREBATE = 100\r", LocalQPrice, LocalQQPointPrice, sugarPriceFor(row.Commodity.Category))
 		fmt.Fprintf(&utf8, "ITEM.1.ID = %d\rITEM.1.NUM = %d\rITEM.1.AVAILPERIOD = 0\r\r", row.ItemID, commodityBundleQuantity(row.Commodity.Name))
 	}
 	writeRecommendations(&utf8, rows)
@@ -118,6 +118,17 @@ func BuildCommodityINIWithLimit(version uint32, items []itemcatalog.RegistryEntr
 		return nil, Summary{}, fmt.Errorf("encode Commodity.ini as GBK: %w", err)
 	}
 	return encoded, Summary{Version: version, CommodityCount: len(rows), ItemCount: len(items)}, nil
+}
+
+// sugarPriceFor keeps consumables at one coin while cosmetics and equipment
+// use the normal shelf price.
+func sugarPriceFor(category string) uint32 {
+	switch category {
+	case "food", "item", "skill", "petcard":
+		return LocalConsumableSugarPrice
+	default:
+		return LocalSugarPrice
+	}
 }
 
 // selectEvenlyByCategory walks every original resource category in rounds.

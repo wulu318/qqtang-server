@@ -16,9 +16,10 @@ var commodityBundleQuantityPattern = regexp.MustCompile(`[\[\(（]\s*([0-9]+)\s*
 const (
 	LocalQPrice       uint32 = 10
 	LocalQQPointPrice uint32 = 10
-	// LocalSugarPrice keeps the shop affordable: every commodity costs a single
-	// sugar coin instead of the historical 1000.
-	LocalSugarPrice uint32 = 1
+	// LocalSugarPrice is the default shelf price. Consumables use
+	// LocalConsumableSugarPrice so pet food and potions stay affordable.
+	LocalSugarPrice           uint32 = 100
+	LocalConsumableSugarPrice uint32 = 1
 )
 
 // Product is the server-authoritative counterpart of one Commodity.ini row.
