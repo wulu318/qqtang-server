@@ -271,6 +271,7 @@ func New(store *persistence.PlayerStore, items []itemcatalog.Entry, equipmentCat
 
 func (server *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/leaderboard", server.handleLeaderboardPage)
 	mux.HandleFunc("/register", func(writer http.ResponseWriter, request *http.Request) {
 		if request.Method == http.MethodGet {
 			server.handleRegisterPage(writer, request)
@@ -314,7 +315,7 @@ func (server *Server) authentication(next http.Handler) http.Handler {
 		return next
 	}
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
-		if strings.HasPrefix(request.URL.Path, "/register") {
+		if strings.HasPrefix(request.URL.Path, "/register") || strings.HasPrefix(request.URL.Path, "/leaderboard") {
 			next.ServeHTTP(writer, request)
 			return
 		}
