@@ -1,4 +1,4 @@
-﻿package launcherapp
+package launcherapp
 
 import (
 	"bufio"
@@ -128,7 +128,7 @@ func (manager *Manager) paths() paths {
 }
 
 type paths struct {
-	config, network, gmAuth, state, server, clientRoot, client, launcher, ports string
+	config, network, gmAuth, state, server, clientRoot, client, launcher, ports   string
 	loginHelper, shopHelper, trace, logs, serverStdout, serverStderr, launcherLog string
 }
 
@@ -171,6 +171,9 @@ func (manager *Manager) Status() Status {
 func (manager *Manager) StartServer(settings networksetup.Settings) (Status, error) {
 	manager.mu.Lock()
 	defer manager.mu.Unlock()
+	if err := backupDatabase(manager.root); err != nil {
+		manager.RecordDiagnostic("数据库备份失败：%v", err)
+	}
 	paths := manager.paths()
 	if len(processesByPath(paths.server)) != 0 {
 		current, err := networksetup.Load(paths.network)
@@ -457,6 +460,54 @@ func waitForFile(ctx context.Context, path string, valid func([]byte) (bool, err
 	}
 }
 
+// backupDatabase snapshots the SQLite save before every server start so a bad
+// upgrade or crash never destroys the only copy. Ten snapshots are kept.
+func backupDatabase(root string) error {
+	source := filepath.Join(root, "runtime", "data", "qqtang.sqlite")
+	info, err := os.Stat(source)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil
+		}
+		return err
+	}
+	if info.Size() == 0 {
+		return nil
+	}
+	dir := filepath.Join(root, "runtime", "backups")
+	if err = os.MkdirAll(dir, 0o755); err != nil {
+		return err
+	}
+	target := filepath.Join(dir, "qqtang-"+time.Now().Format("20060102-150405")+".sqlite")
+	input, err := os.Open(source)
+	if err != nil {
+		return err
+	}
+	defer input.Close()
+	output, err := os.Create(target)
+	if err != nil {
+		return err
+	}
+	if _, err = io.Copy(output, input); err != nil {
+		output.Close()
+		return err
+	}
+	if err = output.Sync(); err != nil {
+		output.Close()
+		return err
+	}
+	if err = output.Close(); err != nil {
+		return err
+	}
+	entries, _ := filepath.Glob(filepath.Join(dir, "qqtang-*.sqlite"))
+	if len(entries) > 10 {
+		for _, stale := range entries[:len(entries)-10] {
+			_ = os.Remove(stale)
+		}
+	}
+	return nil
+}
+
 func serverReachable(ip string, directoryPort int) error {
 	connection, err := net.DialTimeout("tcp", net.JoinHostPort(ip, fmt.Sprint(directoryPort)), 5*time.Second)
 	if err != nil {
@@ -473,6 +524,3 @@ func instanceFile(logs, name string, instance int) string {
 	base := strings.TrimSuffix(name, extension)
 	return filepath.Join(logs, base+"-"+strconv.Itoa(instance)+extension)
 }
-
-
-
