@@ -35,6 +35,7 @@ import (
 	"qqtang/internal/server/application"
 	gmserver "qqtang/internal/server/gm"
 	"qqtang/internal/server/persistence"
+	"qqtang/internal/server/portal"
 )
 
 const (
@@ -510,6 +511,9 @@ func New(config Config) (*Server, error) {
 		directoryHallPayload:  directoryHallPayload,
 		gameSectionID:         gameSectionID,
 	}
+	if playerStore != nil && playerService != nil {
+		server.portalHandler = portal.New(playerStore, playerService, config.playerProfileForUIN).Handler()
+	}
 	if config.GMHTTPAddress != "" {
 		gm, gmErr := gmserver.New(playerStore, itemEntries, equipmentCatalog, config.ClientRoot, config.playerProfileForUIN,
 			gmserver.WithCredentials(config.GMCredentials), gmserver.WithItemImageAliases(config.ItemImageAliasesPath),
@@ -535,7 +539,6 @@ func New(config Config) (*Server, error) {
 			server.log(logEvent{Level: "warn", Event: "gm_item_image_alias_skipped", ErrorContext: warning})
 		}
 		server.gmHandler = gm.Handler()
-		server.portalHandler = gm.PublicHandler()
 	}
 	if config.LogFile != "" {
 		if err := os.MkdirAll(filepath.Dir(config.LogFile), 0o755); err != nil {
