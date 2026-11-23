@@ -33,6 +33,18 @@ Copy-Item .\runtime\backups\hot-20260101-120000\runtime\data .\runtime\data -Rec
 & .\runtime\bin\qqt-launcher-ctl.exe -root . -action start-server
 ```
 
+## 分发边界
+
+只分发启动器、服务端和自有配置。`runtime/client-patched` 属于腾讯客户端文件，更新包不会包含也不会覆盖它：
+
+1. 更新器把 `runtime/client-patched` 列为保护目录。
+2. 玩家必须自备合法安装的 QQ堂 5.2 客户端。
+3. 启动前用 `-action check-client` 校验 `Client.exe`、`Core.dll`、`QQTDir.dll`、`QQTModules.dll`、`QQTSection.dll`、`config/GameCFG.ini` 是否存在。
+
+```powershell
+qqt-launcher-ctl.exe -root . -action check-client
+```
+
 ## 注意
 
 1. 热更只保证服务端不丢存档，不保证在线玩家不掉线；正式服建议在低峰期执行。

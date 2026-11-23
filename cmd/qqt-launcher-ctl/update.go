@@ -168,6 +168,8 @@ var protectedPrefixes = []string{
 	string(os.PathSeparator) + "runtime" + string(os.PathSeparator) + "logs",
 	string(os.PathSeparator) + "runtime" + string(os.PathSeparator) + "updates",
 	string(os.PathSeparator) + "runtime" + string(os.PathSeparator) + "captures",
+	// The client tree is Tencent's; updates must never ship or overwrite it.
+	string(os.PathSeparator) + "runtime" + string(os.PathSeparator) + "client-patched",
 }
 
 func isProtected(relative string) bool {

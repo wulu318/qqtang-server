@@ -236,6 +236,14 @@ func main() {
 		err = manager.SaveGMCredentials(*username, strings.TrimRight(string(password), "\r\n"))
 		status = manager.Status()
 		message = "远程 GM 密码已保存"
+	case "check-client":
+		status = manager.Status()
+		missing := missingClientFiles(filepath.Join(*root, "runtime", "client-patched"))
+		if len(missing) > 0 {
+			err = fmt.Errorf("缺少客户端文件：%s", strings.Join(missing, ", "))
+			break
+		}
+		message = "客户端文件完整"
 	default:
 		err = fmt.Errorf("unknown action %q", *action)
 	}
@@ -250,6 +258,17 @@ func main() {
 		IPCandidates:   networksetup.PrivateIPv4Candidates(),
 		DiagnosticPath: manager.DiagnosticPath(),
 	})
+}
+
+func missingClientFiles(clientRoot string) []string {
+	required := []string{"Client.exe", "Core.dll", "QQTDir.dll", "QQTModules.dll", "QQTSection.dll", filepath.Join("config", "GameCFG.ini")}
+	missing := make([]string, 0, len(required))
+	for _, name := range required {
+		if _, err := os.Stat(filepath.Join(clientRoot, name)); err != nil {
+			missing = append(missing, name)
+		}
+	}
+	return missing
 }
 
 func fatal(root string, err error) {
