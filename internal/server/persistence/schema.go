@@ -58,6 +58,13 @@ func (store *PlayerStore) normalize(ctx context.Context) error {
 			applied_utc TEXT NOT NULL,
 			PRIMARY KEY (uin, seed_key)
 		)`,
+		`CREATE TABLE IF NOT EXISTS invite_codes (
+			code TEXT PRIMARY KEY CHECK (length(code) BETWEEN 6 AND 32),
+			created_utc TEXT NOT NULL,
+			used_by INTEGER,
+			used_utc TEXT
+		)`,
+		`CREATE INDEX IF NOT EXISTS invite_codes_used ON invite_codes(used_by)`,
 		`CREATE TABLE IF NOT EXISTS player_credentials (
 			uin INTEGER PRIMARY KEY REFERENCES local_players(uin) ON DELETE CASCADE,
 			iterations INTEGER NOT NULL CHECK (iterations >= 100000 AND iterations <= 2000000),

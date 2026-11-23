@@ -180,6 +180,11 @@ func (server *Server) handleRegister(writer http.ResponseWriter, request *http.R
 		writeJSON(writer, http.StatusBadRequest, map[string]any{"ok": false, "message": "验证码不正确或已过期"})
 		return
 	}
+	invite := strings.TrimSpace(request.FormValue("invite"))
+	if invite == "" {
+		writeJSON(writer, http.StatusBadRequest, map[string]any{"ok": false, "message": "需要邀请码"})
+		return
+	}
 	password := request.FormValue("password")
 	if request.FormValue("password2") != password {
 		writeJSON(writer, http.StatusBadRequest, map[string]any{"ok": false, "message": "两次密码不一致"})
@@ -204,6 +209,10 @@ func (server *Server) handleRegister(writer http.ResponseWriter, request *http.R
 	}
 	if exists {
 		writeJSON(writer, http.StatusConflict, map[string]any{"ok": false, "message": "该账号已被注册"})
+		return
+	}
+	if err = server.store.ConsumeInviteCode(ctx, invite, uin); err != nil {
+		writeJSON(writer, http.StatusBadRequest, map[string]any{"ok": false, "message": "邀请码无效或已被使用"})
 		return
 	}
 	seed := server.seed(uin)

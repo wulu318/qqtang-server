@@ -290,6 +290,8 @@ func (server *Server) Handler() http.Handler {
 	mux.HandleFunc("/gm/api/items", server.handleItems)
 	mux.HandleFunc("/gm/api/items/", server.handleItemImage)
 	mux.HandleFunc("/gm/api/pets", server.handlePets)
+	mux.HandleFunc("/gm/api/invites", server.handleInvites)
+	mux.HandleFunc("/gm/invites", server.handleInvitePage)
 	mux.HandleFunc("/gm/api/pet-models/", server.handlePetModelImage)
 	mux.HandleFunc("/gm/", server.handleStatic)
 	mux.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {

@@ -29,6 +29,8 @@ var registerPage = template.Must(template.New("register").Parse(`<!doctype html>
     <input name="password2" type="password" minlength="6" maxlength="16" required>
     <label>昵称（可选）</label>
     <input name="nickname" maxlength="16">
+    <label>邀请码</label>
+    <input name="invite" maxlength="32" required>
     <label>验证：{{.Question}}</label>
     <input name="captcha" inputmode="numeric" required>
     <input type="hidden" name="captcha_token" value="{{.Token}}">
