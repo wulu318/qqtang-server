@@ -40,6 +40,9 @@ const (
 	memReserve                = 0x00002000
 	memFree                   = 0x00010000
 	pageReadWrite             = 0x00000004
+	pageExecuteReadWrite      = 0x00000040
+	threadAllAccess           = 0x001FFFFF
+	contextDebugRegisters     = 0x00100010
 	maxDebugStringBytes       = 4096
 	maxFramePointerStackDepth = 64
 )
@@ -56,24 +59,29 @@ var (
 	procWow64SetThreadContext    = kernel32.NewProc("Wow64SetThreadContext")
 	procGetFinalPathNameByHandle = kernel32.NewProc("GetFinalPathNameByHandleW")
 	procTerminateProcess         = kernel32.NewProc("TerminateProcess")
+	procWriteProcessMemory       = kernel32.NewProc("WriteProcessMemory")
+	procVirtualProtectEx         = kernel32.NewProc("VirtualProtectEx")
 )
 
 type Options struct {
-	Executable      string
-	WorkingDir      string
-	Arguments       []string
-	Output          io.Writer
-	DumpDirectory   string
-	TraceFromModule string
-	TraceTail       int
-	HealFreePages   int
-	Timeout         time.Duration
+	Executable       string
+	WorkingDir       string
+	Arguments        []string
+	Output           io.Writer
+	DumpDirectory    string
+	TraceFromModule  string
+	TraceTail        int
+	HealFreePages    int
+	Timeout          time.Duration
+	BreakRVA         uint32
+	HardwareBreakRVA uint32
 }
 
 type Runner struct {
 	options       Options
 	process       syscall.Handle
 	processID     uint32
+	imageBase     uintptr
 	modules       map[uintptr]module
 	encoder       *json.Encoder
 	start         time.Time
@@ -308,7 +316,18 @@ func (runner *Runner) run() error {
 		switch event.Code {
 		case createProcessDebugEvent:
 			info := (*createProcessDebugInfo)(unsafe.Pointer(&event.Info[0]))
+			runner.imageBase = info.BaseOfImage
 			runner.addModule(info.BaseOfImage, runner.options.Executable)
+			if runner.options.BreakRVA != 0 {
+				if err := runner.writeBreakpoint(info.BaseOfImage + uintptr(runner.options.BreakRVA)); err != nil {
+					runner.emit(map[string]any{"event": "breakpoint_failed", "error": err.Error()})
+				}
+			}
+			if runner.options.HardwareBreakRVA != 0 {
+				if err := runner.setHardwareBreakpoint(event.ThreadID, info.BaseOfImage+uintptr(runner.options.HardwareBreakRVA)); err != nil {
+					runner.emit(map[string]any{"event": "hw_breakpoint_failed", "error": err.Error()})
+				}
+			}
 			runner.emit(map[string]any{"event": "create_process_debug", "thread_id": event.ThreadID, "base": hexPointer(info.BaseOfImage), "start_address": hexPointer(info.StartAddress)})
 			if info.FileHandle != 0 && info.FileHandle != syscall.InvalidHandle {
 				_ = syscall.CloseHandle(info.FileHandle)
@@ -341,6 +360,18 @@ func (runner *Runner) run() error {
 			}
 		case exceptionDebugEvent:
 			info := (*exceptionDebugInfo)(unsafe.Pointer(&event.Info[0]))
+			if runner.options.HardwareBreakRVA != 0 && info.Record.Code == exceptionSingleStep && info.Record.Address == runner.imageBase+uintptr(runner.options.HardwareBreakRVA) {
+				dumps, dumpErrors := runner.dumpRelevantModules(runner.imageBase + uintptr(runner.options.HardwareBreakRVA))
+				runner.emit(map[string]any{"event": "oep_hardware_breakpoint", "address": hexPointer(info.Record.Address), "module_dumps": dumps, "module_dump_errors": dumpErrors})
+				_, _, _ = procTerminateProcess.Call(uintptr(runner.process), 0)
+				return nil
+			}
+			if runner.options.BreakRVA != 0 && info.Record.Code == exceptionBreakpoint && info.Record.Address == runner.imageBase+uintptr(runner.options.BreakRVA) {
+				dumps, dumpErrors := runner.dumpRelevantModules(runner.imageBase + uintptr(runner.options.BreakRVA))
+				runner.emit(map[string]any{"event": "oep_breakpoint", "address": hexPointer(info.Record.Address), "module_dumps": dumps, "module_dump_errors": dumpErrors})
+				_, _, _ = procTerminateProcess.Call(uintptr(runner.process), 0)
+				return nil
+			}
 			if (info.Record.Code == exceptionSingleStep || info.Record.Code == exceptionWOW64SingleStep) && runner.traceEnabled && event.ThreadID == runner.traceThreadID {
 				registers, err := runner.registers(event.ThreadID)
 				if err != nil {
@@ -550,6 +581,46 @@ func (runner *Runner) traceSnapshot() []traceEntry {
 	result = append(result, runner.traceTail[runner.traceNext:]...)
 	result = append(result, runner.traceTail[:runner.traceNext]...)
 	return result
+}
+
+func (runner *Runner) setHardwareBreakpoint(threadID uint32, address uintptr) error {
+	handle, _, callErr := procOpenThread.Call(threadAllAccess, 0, uintptr(threadID))
+	if handle == 0 {
+		return fmt.Errorf("OpenThread: %w", callErr)
+	}
+	defer syscall.CloseHandle(syscall.Handle(handle))
+
+	context := make([]byte, 1024)
+	// WOW64_CONTEXT: ContextFlags at 0, Dr0 at 4, Dr7 at 24.
+	binary.LittleEndian.PutUint32(context[0:], contextDebugRegisters)
+	ok, _, ctxErr := procWow64GetThreadContext.Call(handle, uintptr(unsafe.Pointer(&context[0])))
+	if ok == 0 {
+		return fmt.Errorf("Wow64GetThreadContext: %w", ctxErr)
+	}
+	flags := binary.LittleEndian.Uint32(context[0:])
+	binary.LittleEndian.PutUint32(context[0:], flags|contextDebugRegisters)
+	binary.LittleEndian.PutUint32(context[4:], uint32(address)) // Dr0
+	binary.LittleEndian.PutUint32(context[24:], 1)              // Dr7: L0=1, exec, len=1
+	ok, _, ctxErr = procWow64SetThreadContext.Call(handle, uintptr(unsafe.Pointer(&context[0])))
+	if ok == 0 {
+		return fmt.Errorf("Wow64SetThreadContext: %w", ctxErr)
+	}
+	return nil
+}
+
+func (runner *Runner) writeBreakpoint(address uintptr) error {
+	var oldProtect uint32
+	ok, _, callErr := procVirtualProtectEx.Call(uintptr(runner.process), address, 1, pageExecuteReadWrite, uintptr(unsafe.Pointer(&oldProtect)))
+	if ok == 0 {
+		return fmt.Errorf("VirtualProtectEx: %w", callErr)
+	}
+	value := byte(0xcc)
+	var written uintptr
+	ok, _, callErr = procWriteProcessMemory.Call(uintptr(runner.process), address, uintptr(unsafe.Pointer(&value)), 1, uintptr(unsafe.Pointer(&written)))
+	if ok == 0 {
+		return fmt.Errorf("WriteProcessMemory: %w", callErr)
+	}
+	return nil
 }
 
 func (runner *Runner) addModule(base uintptr, path string) {
