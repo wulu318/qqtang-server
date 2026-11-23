@@ -56,7 +56,13 @@ func fetchRemoteConfig(root, url string, timeout time.Duration) (remoteConfig, e
 	var cfg remoteConfig
 	body = bytes.TrimPrefix(body, []byte{0xef, 0xbb, 0xbf})
 	if err = json.Unmarshal(body, &cfg); err != nil {
-		return remoteConfig{}, err
+		// Plain-text bootstrap: one key=value per line, e.g.
+		// server_ip=1.2.3.4
+		// mode=remote-host
+		cfg = parseTextConfig(body)
+		if cfg.ServerIP == "" {
+			return remoteConfig{}, fmt.Errorf("配置既不是 JSON 也没有 server_ip")
+		}
 	}
 	cfg.ServerIP = strings.TrimSpace(cfg.ServerIP)
 	cfg.ClientServerIP = strings.TrimSpace(cfg.ClientServerIP)
@@ -83,6 +89,32 @@ func readCachedConfig(root string) (remoteConfig, error) {
 		return remoteConfig{}, fmt.Errorf("缓存配置缺少 server_ip")
 	}
 	return cfg, nil
+}
+
+func parseTextConfig(body []byte) remoteConfig {
+	var cfg remoteConfig
+	for _, line := range strings.Split(string(body), "\n") {
+		line = strings.TrimSpace(strings.TrimSuffix(line, "\r"))
+		if line == "" || strings.HasPrefix(line, "#") || strings.HasPrefix(line, "//") {
+			continue
+		}
+		key, value, ok := strings.Cut(line, "=")
+		if !ok {
+			key, value, ok = strings.Cut(line, ":")
+		}
+		if !ok {
+			continue
+		}
+		switch strings.ToLower(strings.TrimSpace(key)) {
+		case "server_ip", "serverip", "host", "ip":
+			cfg.ServerIP = strings.TrimSpace(value)
+		case "client_server_ip", "clientserverip":
+			cfg.ClientServerIP = strings.TrimSpace(value)
+		case "mode":
+			cfg.Mode = strings.TrimSpace(value)
+		}
+	}
+	return cfg
 }
 
 func main() {

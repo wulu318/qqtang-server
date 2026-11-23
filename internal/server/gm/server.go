@@ -57,6 +57,7 @@ type Server struct {
 	authCache        sync.Map
 	registerMu       sync.Mutex
 	registerWindows  map[string]registerWindowEntry
+	captchaSecret    []byte
 }
 
 // ItemImageWarnings reports optional GM-preview resources which were skipped.
@@ -281,6 +282,7 @@ func New(store *persistence.PlayerStore, items []itemcatalog.Entry, equipmentCat
 
 func (server *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/assets/", server.serveRegisterAsset)
 	mux.HandleFunc("/leaderboard", server.handleLeaderboardPage)
 	mux.HandleFunc("/register", func(writer http.ResponseWriter, request *http.Request) {
 		if request.Method == http.MethodGet {
