@@ -28,7 +28,7 @@ func TestReplaceTreeProtectsSaves(t *testing.T) {
 	mustWrite(source, "runtime/data/qqtang.sqlite", "new")
 	mustWrite(source, "runtime/bin/app.exe", "binary")
 	mustWrite(root, "runtime/data/qqtang.sqlite", "old-save")
-	if err := replaceTree(source, root); err != nil {
+	if err := replaceTree(source, root, false); err != nil {
 		t.Fatal(err)
 	}
 	save, _ := os.ReadFile(filepath.Join(root, "runtime/data/qqtang.sqlite"))

@@ -133,6 +133,7 @@ func main() {
 	username := flag.String("username", "", "GM username")
 	passwordStdin := flag.Bool("password-stdin", false, "read the GM password from stdin")
 	configURL := flag.String("config-url", "", "HTTP(S) endpoint returning {\"server_ip\":\"...\"}")
+	allowClientUpdate := flag.Bool("allow-client-update", false, "allow the update package to replace runtime/client-patched (only for private distribution)")
 	flag.Parse()
 
 	if *root == "" {
@@ -182,7 +183,7 @@ func main() {
 		message = "server_ip=" + *serverIP
 	case "update":
 		status = manager.Status()
-		updated, updateMessage, updateErr := runUpdate(*root, *configURL)
+		updated, updateMessage, updateErr := runUpdate(*root, *configURL, *allowClientUpdate)
 		if updateErr != nil {
 			err = updateErr
 			break

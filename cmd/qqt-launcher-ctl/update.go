@@ -36,7 +36,7 @@ func readLocalVersion(root string) string {
 
 // runUpdate checks the bootstrap document, downloads a package, verifies its
 // hash and replaces everything except saves, logs and backups.
-func runUpdate(root, configURL string) (bool, string, error) {
+func runUpdate(root, configURL string, allowClient bool) (bool, string, error) {
 	remote, err := fetchRemoteConfig(root, configURL, 10*time.Second)
 	if err != nil {
 		return false, "", err
@@ -75,7 +75,7 @@ func runUpdate(root, configURL string) (bool, string, error) {
 	if entries, readErr := os.ReadDir(temp); readErr == nil && len(entries) == 1 && entries[0].IsDir() {
 		source = filepath.Join(temp, entries[0].Name())
 	}
-	if err = replaceTree(source, root); err != nil {
+	if err = replaceTree(source, root, allowClient); err != nil {
 		return false, "", err
 	}
 	if err = os.WriteFile(versionPath(root), []byte(fmt.Sprintf("{\"version\":%q}\n", remote.Version)), 0o644); err != nil {
@@ -172,9 +172,12 @@ var protectedPrefixes = []string{
 	string(os.PathSeparator) + "runtime" + string(os.PathSeparator) + "client-patched",
 }
 
-func isProtected(relative string) bool {
+func isProtected(relative string, allowClient bool) bool {
 	path := string(os.PathSeparator) + relative
 	for _, prefix := range protectedPrefixes {
+		if !allowClient && strings.Contains(prefix, "client-patched") {
+			continue
+		}
 		if strings.HasPrefix(path, prefix) {
 			return true
 		}
@@ -182,7 +185,7 @@ func isProtected(relative string) bool {
 	return false
 }
 
-func replaceTree(source, root string) error {
+func replaceTree(source, root string, allowClient bool) error {
 	return filepath.Walk(source, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -192,7 +195,7 @@ func replaceTree(source, root string) error {
 			return nil
 		}
 		destination := filepath.Join(root, relative)
-		if isProtected(relative) {
+		if isProtected(relative, allowClient) {
 			if info.IsDir() {
 				return filepath.SkipDir
 			}
